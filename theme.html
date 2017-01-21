@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Base Css</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="theme.css">
+    <style>
+    .intro {
+        margin-bottom: 50px;
+    }
+    .preview {
+        padding: 10px 15px;
+        margin-bottom: 10px;
+        border: 1px solid #e1e1e8;
+    }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+<h1>Base CSS</h1>
+<div class="intro">
+  <p>A simple CSS theme to kick start your project. Provides a consistent responsive style across mobile and desktop browsers for the base HTML elements. The popular <a href="https://fonts.google.com/specimen/Open+Sans">Open Sans font</a> is used to keep the text consistent between browsers.</p>
+  
+  <p>Designed for Chrome, Firefox, Safari and IE9+</p>
+</div>
+
+<h2>HTML5 doctype</h2>
+<p>Base CSS makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype. Include it at the beginning of all your projects.</p>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  ...
+&lt;/html&gt;
+</pre>
+
+<h2>HTML5 doctype</h2>
+<p>Base CSS is mobile first. To ensure proper rendering and touch zooming, add the viewport meta tag to your &lt;head&gt;.</p>
+<pre>
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+</pre>
+
+<h2>Container</h2>
+<p>Use .container for a responsive fixed width container.</p>
+<pre>
+&lt;div class=&quot;container&quot;&gt;
+  ...
+&lt;/div&gt;
+</pre>
+
+<h2>Media queries</h2>
+<p>The following media query is used to apply alternate styles for desktop devices.</p>
+<pre>
+@media (min-width: 1200px) { 
+  ...
+}
+</pre>
+
+<h2>Headings</h2>
+<div class="preview">
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+</div>
+
+<h2>Paragraph</h2>
+<div class="preview">
+<p>Normal text, <strong>Strong text</strong>, <u>Underlined text</u>, <i>Italic text</i>, <small>Small text</small></p>
+<p>Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</p>
+<p>Lorem ipsum dolor sit amet, emphasis consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</p>
+
+</div>
+
+<h2>Lists</h2>
+<h3>Unordered List</h3>
+<div class="preview">
+<ul>
+<li>List Item 1</li>
+<li>List Item 2</li>
+<li>List Item 3</li>
+</ul>
+</div>
+
+<h3>Ordered List</h3>
+<div class="preview">
+<ol>
+<li>List Item 1</li>
+<li>List Item 2</li>
+<li>List Item 3</li>
+</ol>
+</div>
+
+
+<h2>Table</h2>
+<div class="preview">
+<table>
+<thead>
+<tr><th>#</th><th>First Name</th><th>Last Name</th><th class="mobile-hide">Username</th></tr>
+</thead>
+<tbody>
+<tr><th>1</th><td>Mark</td><td>Otto</td><td class="mobile-hide">@mdo</td></tr>
+<tr><th>2</th><td>Jacob</td><td>Thornton</td><td class="mobile-hide">@fat</td></tr>
+<tr><th>3</th><td>Larry</td><td>the Bird</td><td class="mobile-hide">@twitter</td></tr>
+</tbody>
+</table>
+</div>
+
+
+<h2>Buttons</h2>
+<div class="preview">
+<button>Primary</button>
+<button class="extra">Secondary</button>
+</div>
+
+
+<h2>Forms</h2>
+<div class="preview">
+<form>
+<label for="title">Title</label>
+<div class="select">
+  <select id="title" type="text">
+    <option>Mr</option>
+    <option>Mrs</option>
+    <option>Miss</option>
+  </select>
+</div>
+
+<label for="name">Name</label>
+<input id="name" type="text" placeholder="Name" value="Mark Otto">
+
+<label for="mobile">Mobile</label>
+<input id="mobile" type="tel" placeholder="Mobile Number">
+
+<label for="accept">Accept Terms</label>
+<div class="checkbox">
+  <input id="accept" type="checkbox">
+  <span></span>
+</div>
+
+<label for="notes">Notes</label>
+<textarea id="notes" placeholder="Add some notes">One
+Two
+Three</textarea>
+</form>
+</div>
+
+</div>
+
+</body>
+</html>

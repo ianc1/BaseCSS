@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body, h1, h2, h3, h4, h5, h6, p, pre, input, select, textarea, button, a, span, label {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: #2d3239;
+    line-height: 1.42857143;
+    vertical-align: baseline;
+}
+
+body {
+    font-size: 14px;
+}
+
+/* Text Formatting */
+h1, h2, h3, h4, h5, h6 {
+    margin: 20px 0 10px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+ul,
+ol {
+    margin-left: 20px;
+    padding-left: 0;
+}
+
+pre {
+    padding: 10px 15px;
+    border: 1px solid #e1e1e8;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 13px;
+}
+
+/* Form Inputs */
+label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+input,
+select,
+.select,
+textarea {
+    background: #fff;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    line-height: 17px;
+    height: 32px;
+    width: 100%;
+    padding: 7px 8px 7px 8px;
+    margin-bottom: 10px;
+    font-size: inherit;
+}
+select {
+    cursor: pointer;
+}
+textarea {
+    min-height: 68px;
+    overflow: auto;
+}
+
+input::-webkit-input-placeholder { font-style: italic; color: #a9a9a9; }
+input::-moz-placeholder { font-style: italic; color: #a9a9a9; }
+input:-ms-input-placeholder { font-style: italic; color: #a9a9a9; }
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #F7882F;
+    box-shadow: none;
+    outline: none;
+}
+
+/* Buttons */
+button {
+    background: #6a6969;
+    color: #fff;
+    padding: 7px 10px 7px 10px;
+}
+button.extra {
+    background: #a9a9a9;
+    color: #fff;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #F7882F;
+}
+
+a {
+    cursor: pointer;
+}
+a:hover,
+a:hover span {
+    color: #F7882F;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-spacing: 0;
+}
+td,
+th {
+    text-align: left;
+    padding: 8px;
+}
+table>thead>tr>th {
+    border-bottom: 2px solid #ddd;
+}
+table>tbody>tr>td,
+table>tbody>tr>th {
+    border-top: 1px solid #ddd;
+    padding: 8px;
+}
+table>tbody>tr:first-child>td,
+table>tbody>tr:first-child>th {
+    border-top: 0;
+}
+
+/* Custom checkbox */
+.checkbox,
+.checkbox input[type=checkbox] {
+    height: 20px;
+    width: 20px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.checkbox input[type=checkbox] {
+  opacity: 0;
+}
+.checkbox input[type=checkbox]:checked + span:before {
+    content: '\2713';
+    display: block;
+    position: relative;
+    margin-top: -33px;
+    margin-left: 4px;
+    font-size: 18px;
+    z-index: -1;
+}
+
+/* Custom select dropdown */
+.select {
+    padding: 0;
+    border: none;
+    position: relative;
+}
+.select:after {
+    content: '\25BC';
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    padding: 6px;
+    margin: 2px;
+    background-color: #FFF;
+    pointer-events: none;
+}
+select {
+    margin: 0;
+    outline: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    line-height: normal;
+    padding-top: 6px;
+}
+select:focus {
+    outline: none;
+}
+select:-moz-focusring { 
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
+option {
+    border: 1px solid #ddd;
+}
+
+/* Utils */
+.container {
+    margin: 10px;
+    margin-bottom: 30px;
+}
+
+.mobile-hide {
+    display: none;
+}
+
+/* Desktop style overrides */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .mobile-hide {
+        display: block;
+    }
+}
