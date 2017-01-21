@@ -35,7 +35,7 @@ pre {
     border: 1px solid #e1e1e8;
     border-radius: 4px;
     font-family: monospace;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 /* Form Inputs */
@@ -170,23 +170,15 @@ table>tbody>tr:first-child>th {
 }
 select {
     margin: 0;
-    outline: none;
-    box-shadow: none;
     -webkit-appearance: none;
     -moz-appearance: none;
+    -ms-appearance: none;
     appearance: none;
-    line-height: normal;
-    padding-top: 6px;
-}
-select:focus {
-    outline: none;
+    -moz-padding-start: 5px;
 }
 select:-moz-focusring { 
     color: transparent;
     text-shadow: 0 0 0 #000;
-}
-option {
-    border: 1px solid #ddd;
 }
 
 /* Utils */
