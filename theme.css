@@ -64,7 +64,12 @@ pre {
     border: 1px solid #e1e1e8;
     border-radius: 4px;
     font-family: monospace;
-    font-size: 14px;
+    font-size: 13px;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 
 /* Form Inputs */
