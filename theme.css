@@ -199,6 +199,7 @@ table>tbody>tr:first-child>th {
     top: 0px;
     padding: 6px;
     margin: 2px;
+    color: #2d3239;
     background-color: #FFF;
     pointer-events: none;
 }
