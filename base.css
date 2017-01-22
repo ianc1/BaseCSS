@@ -161,6 +161,9 @@ a:hover,
 a:hover span {
     color: #F7882F;
 }
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    text-decoration: none;
+}
 
 /* Table */
 table {
