@@ -181,24 +181,69 @@ select:-moz-focusring {
     text-shadow: 0 0 0 #000;
 }
 
+/* Navbar */
+.navbar {
+    max-width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+    border-bottom: 1px solid #2d3239;
+    margin-bottom: 10px;
+}
+.nav {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    line-height: 20px;
+
+}
+.nav li {
+    padding: 5px 10px 5px 10px;
+}
+.nav li a {
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.nav li a:hover,
+.nav li a.active {
+    color: #F7882F;
+}
+
 /* Utils */
 .container {
     margin: 10px;
     margin-bottom: 30px;
 }
-
 .mobile-hide {
     display: none;
 }
 
 /* Desktop style overrides */
 @media (min-width: 1200px) {
+  
+    /* Navbar */
+    .navbar {
+        height: 50px;
+    }
+    .navbar-nav {
+        float: left;
+    }
+    .nav li {
+        display: inline-block;
+        padding: 15px 10px 15px 10px;
+    }
+    .navbar-right {
+        float: right!important;
+        right: 0;
+        left: auto;
+    }
+    
+    /* Utils */  
     .container {
         width: 1170px;
         margin-left: auto;
         margin-right: auto;
-    }
-    
+    }    
     .mobile-hide {
         display: block;
     }
