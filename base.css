@@ -114,6 +114,18 @@ textarea:focus {
     box-shadow: none;
     outline: none;
 }
+label {
+    margin-right: 5px;
+}
+
+form.inline label,
+form.inline input,
+form.inline .select,
+form.inline .checkbox {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+}
 
 /* Buttons */
 button {
@@ -176,21 +188,22 @@ table>tbody>tr:first-child>th {
 /* Custom checkbox */
 .checkbox,
 .checkbox input[type=checkbox] {
-    height: 20px;
-    width: 20px;
+    line-height: 17px;
+    height: 32px;
+    width: 32px;
     border: 1px solid #ddd;
     margin-bottom: 10px;
     cursor: pointer;
 }
 .checkbox input[type=checkbox] {
-  opacity: 0;
+    opacity: 0;
 }
 .checkbox input[type=checkbox]:checked + span:before {
     content: '\2713';
     display: block;
     position: relative;
-    margin-top: -33px;
-    margin-left: 4px;
+    margin-top: -39px;
+    margin-left: 9px;
     font-size: 18px;
     z-index: -1;
 }
@@ -230,7 +243,7 @@ select:-moz-focusring {
     max-width: 980px;
     margin-right: auto;
     margin-left: auto;
-    border-bottom: 1px solid #2d3239;
+    border-bottom: 1px solid #e1e1e8;
     margin-bottom: 10px;
 }
 .nav {
@@ -271,7 +284,18 @@ select:-moz-focusring {
 
 /* Desktop style overrides */
 @media (min-width: 1200px) {
-  
+
+    /* Inline Form */
+    form.inline input,
+    form.inline .select,
+    form.inline .checkbox {
+        margin-right: 10px;
+    }
+    form.inline input,
+    form.inline .select {
+        width: 200px;
+    }
+
     /* Navbar */
     .navbar {
         height: 50px;

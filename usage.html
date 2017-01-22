@@ -160,7 +160,7 @@
   <tbody>
     <tr><th>1</th><td>Mark</td><td>Otto</td><td class="mobile-hide">@mdo</td></tr>
     <tr><th>2</th><td>Jacob</td><td>Thornton</td><td class="mobile-hide">@fat</td></tr>
-    <tr><th>3</th><td>Larry</td><td>the Bird</td><td class="mobile-hide">@twitter</td></tr>
+    <tr><th>3</th><td>Larry</td><td>Bird</td><td class="mobile-hide">@twitter</td></tr>
   </tbody>
 </table>
 
@@ -173,7 +173,7 @@
   &lt;tbody&gt;
     &lt;tr&gt;&lt;th&gt;1&lt;/th&gt;&lt;td&gt;Mark&lt;/td&gt;&lt;td&gt;Otto&lt;/td&gt;&lt;td class=&quot;mobile-hide&quot;&gt;@mdo&lt;/td&gt;&lt;/tr&gt;
     &lt;tr&gt;&lt;th&gt;2&lt;/th&gt;&lt;td&gt;Jacob&lt;/td&gt;&lt;td&gt;Thornton&lt;/td&gt;&lt;td class=&quot;mobile-hide&quot;&gt;@fat&lt;/td&gt;&lt;/tr&gt;
-    &lt;tr&gt;&lt;th&gt;3&lt;/th&gt;&lt;td&gt;Larry&lt;/td&gt;&lt;td&gt;the Bird&lt;/td&gt;&lt;td class=&quot;mobile-hide&quot;&gt;@twitter&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;th&gt;3&lt;/th&gt;&lt;td&gt;Larry&lt;/td&gt;&lt;td&gt;Bird&lt;/td&gt;&lt;td class=&quot;mobile-hide&quot;&gt;@twitter&lt;/td&gt;&lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 </pre>
@@ -200,6 +200,7 @@
 
 <section>
 <h3>Forms</h3>
+<h4>Basic</h4>
 <form>
 <label for="title">Title</label>
 <div class="select">
@@ -218,7 +219,7 @@
 
 <label for="accept">Accept Terms</label>
 <div class="checkbox">
-  <input id="accept" type="checkbox">
+  <input id="accept" type="checkbox" checked>
   <span></span>
 </div>
 
@@ -226,6 +227,27 @@
 <textarea id="notes" placeholder="Add some notes">One
 Two
 Three</textarea>
+</form>
+
+<h4>Inline</h4>
+<form class="inline">
+  <label for="username">Username</label><div class="select">
+    <select id="username" type="text">
+      <option>Mark_Otto</option>
+      <option>Jacob_Thornton</option>
+      <option>Larry_Bird</option>
+    </select>
+  </div>
+
+  <label for="password">Password</label><input id="password" type="password" placeholder="Password" value="xxxxxx">
+
+  <label for="rememberme">Remember Me</label>
+  <div class="checkbox">
+    <input id="rememberme" type="checkbox" checked>
+    <span></span>
+  </div>
+
+  <button class="primary"><i class="icon">forward</i>Sign In</button>
 </form>
 
 <h5>HTML</h5>
@@ -256,6 +278,27 @@ Three</textarea>
 &lt;textarea id=&quot;notes&quot; placeholder=&quot;Add some notes&quot;&gt;One
 Two
 Three&lt;/textarea&gt;
+&lt;/form&gt;
+
+
+&lt;form class=&quot;inline&quot;&gt;
+  &lt;label for=&quot;username&quot;&gt;Username&lt;/label&gt;&lt;div class=&quot;select&quot;&gt;
+    &lt;select id=&quot;username&quot; type=&quot;text&quot;&gt;
+      &lt;option&gt;Mark_Otto&lt;/option&gt;
+      &lt;option&gt;Jacob_Thornton&lt;/option&gt;
+      &lt;option&gt;Larry_Bird&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+
+  &lt;label for=&quot;password&quot;&gt;Password&lt;/label&gt;&lt;input id=&quot;password&quot; type=&quot;password&quot; placeholder=&quot;Password&quot; value=&quot;xxxxxx&quot;&gt;
+
+  &lt;label for=&quot;rememberme&quot;&gt;Remember Me&lt;/label&gt;
+  &lt;div class=&quot;checkbox&quot;&gt;
+    &lt;input id=&quot;rememberme&quot; type=&quot;checkbox&quot; checked&gt;
+    &lt;span&gt;&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;button class=&quot;primary&quot;&gt;&lt;i class=&quot;icon&quot;&gt;forward&lt;/i&gt;Sign In&lt;/button&gt;
 &lt;/form&gt;
 </pre>
 
