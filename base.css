@@ -204,6 +204,7 @@ table>tbody>tr:first-child>th {
     height: 32px;
     width: 32px;
     border: 1px solid #ddd;
+    box-sizing: border-box;
     margin-bottom: 10px;
     cursor: pointer;
 }
