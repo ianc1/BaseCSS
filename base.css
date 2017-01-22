@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url('https://fonts.googleapis.com/css?family=Droid+Sans+Mono');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 body, h1, h2, h3, h4, h5, h6, section, p, pre, input, select, textarea, button, a, span, label {
     margin: 0;
@@ -116,22 +117,29 @@ textarea:focus {
 
 /* Buttons */
 button {
-    background: #6a6969;
+    background: #a9a9a9;    
     color: #fff;
     padding: 7px 10px 7px 10px;
 }
-button.extra {
-    background: #a9a9a9;
-    color: #fff;
+button.primary {
+    background: #6a6969;
 }
-
 button:focus {
     outline: none;
 }
-
 button:hover {
     cursor: pointer;
     background-color: #F7882F;
+}
+i.icon {
+    font-family: 'Material Icons';
+    font-style: normal;
+    vertical-align: bottom;
+    font-feature-settings: 'liga' 1
+}
+button i {
+    color: #fff;
+    padding-right: 7px;
 }
 
 a {
