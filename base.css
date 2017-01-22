@@ -121,11 +121,20 @@ label {
 form.inline label,
 form.inline input,
 form.inline .select,
-form.inline .checkbox {
+form.inline .checkbox,
+form.inline button {
     display: inline-block;
-    margin-bottom: 0;
     vertical-align: middle;
 }
+form.inline button {
+    margin-bottom: 10px;
+}
+form.inline label,
+form.inline .checkbox,
+form.inline button {
+    margin-right: 10px;
+}
+
 
 /* Buttons */
 button {
@@ -290,13 +299,9 @@ select:-moz-focusring {
 
     /* Inline Form */
     form.inline input,
-    form.inline .select,
-    form.inline .checkbox {
-        margin-right: 10px;
-    }
-    form.inline input,
     form.inline .select {
         width: 200px;
+        margin-right: 10px;
     }
 
     /* Navbar */
