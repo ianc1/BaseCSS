@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
-body, h1, h2, h3, h4, h5, h6, p, pre, input, select, textarea, button, a, span, label {
+body, h1, h2, h3, h4, h5, h6, section, p, pre, input, select, textarea, button, a, span, label {
     margin: 0;
     padding: 0;
     border: 0;
@@ -15,9 +15,20 @@ body {
     font-size: 14px;
 }
 
+hr {
+  height:0;
+  border:0;
+  border-top:1px solid #e1e1e8;
+  margin: 15px 0 15px;
+}
+
 /* Text Formatting */
 h1, h2, h3, h4, h5, h6 {
     margin: 20px 0 10px;
+}
+
+section {
+    margin-bottom: 50px;
 }
 
 p {
@@ -209,6 +220,13 @@ select:-moz-focusring {
     color: #F7882F;
 }
 
+/* Grid Layout */
+.row:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
 /* Utils */
 .container {
     margin: 10px;
@@ -236,6 +254,38 @@ select:-moz-focusring {
         float: right!important;
         right: 0;
         left: auto;
+    }
+    
+    /* Grid Layout */
+    [class*='col-'] {
+        float: left;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .col-1-8 {
+        width: 12.5%;
+    }
+    .col-2-8 {
+        width: 25%;
+    }
+    .col-3-8 {
+        width: 37.5%;
+    }
+    .col-4-8 {
+        width: 50%;
+    }
+    .col-5-8 {
+        width: 62.5%;
+    }
+    .col-6-8 {
+        width: 75%;
+    }
+    .col-7-8 {
+        width: 87.5%;
+    }
+    .col-8-8 {
+        width: 100%;
     }
     
     /* Utils */  

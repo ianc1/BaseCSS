@@ -6,13 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="theme.css">
     <style>
-    .intro {
-        margin-bottom: 50px;
-    }
-    .preview {
-        padding: 10px 15px;
-        margin-bottom: 10px;
-        border: 1px solid #e1e1e8;
+    [class*='col-'] {
+        border: 1px dashed #e1e1e8;
+        padding: 10px;
     }
     </style>
 </head>
@@ -21,12 +17,14 @@
 <div class="container">
 
 <h1>Base CSS</h1>
-<div class="intro">
+<section>
   <p>A simple CSS theme to kick start your project. Provides a consistent responsive style across mobile and desktop browsers for the base HTML elements. The popular <a href="https://fonts.google.com/specimen/Open+Sans">Open Sans font</a> is used to keep the text consistent between browsers.</p>
   
   <p>Designed for Chrome, Firefox, Safari and IE9+</p>
-</div>
+</section>
 
+
+<section>
 <h2>HTML5 doctype</h2>
 <p>Base CSS makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype. Include it at the beginning of all your projects.</p>
 <pre>
@@ -35,13 +33,19 @@
   ...
 &lt;/html&gt;
 </pre>
+</section>
 
+
+<section>
 <h2>HTML5 doctype</h2>
 <p>Base CSS is mobile first. To ensure proper rendering and touch zooming, add the viewport meta tag to your &lt;head&gt;.</p>
 <pre>
 &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
 </pre>
+</section>
 
+
+<section>
 <h2>Container</h2>
 <p>Use .container for a responsive fixed width container.</p>
 <pre>
@@ -49,7 +53,10 @@
   ...
 &lt;/div&gt;
 </pre>
+</section>
 
+
+<section>
 <h2>Media queries</h2>
 <p>The following media query is used to apply alternate styles for desktop devices.</p>
 <pre>
@@ -57,47 +64,48 @@
   ...
 }
 </pre>
+</section>
 
+
+<section>
 <h2>Headings</h2>
-<div class="preview">
 <h1>Heading 1</h1>
 <h2>Heading 2</h2>
 <h3>Heading 3</h3>
 <h4>Heading 4</h4>
 <h5>Heading 5</h5>
 <h6>Heading 6</h6>
-</div>
+</section>
 
+
+<section>
 <h2>Paragraph</h2>
-<div class="preview">
 <p>Normal text, <strong>Strong text</strong>, <u>Underlined text</u>, <i>Italic text</i>, <small>Small text</small></p>
 <p>Lorem ipsum dolor sit amet, adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</p>
 <p>Lorem ipsum dolor sit amet, emphasis consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</p>
+</section>
 
-</div>
 
+<section>
 <h2>Lists</h2>
 <h3>Unordered List</h3>
-<div class="preview">
 <ul>
 <li>List Item 1</li>
 <li>List Item 2</li>
 <li>List Item 3</li>
 </ul>
-</div>
 
 <h3>Ordered List</h3>
-<div class="preview">
 <ol>
 <li>List Item 1</li>
 <li>List Item 2</li>
 <li>List Item 3</li>
 </ol>
-</div>
+</section>
 
 
+<section>
 <h2>Table</h2>
-<div class="preview">
 <table>
 <thead>
 <tr><th>#</th><th>First Name</th><th>Last Name</th><th class="mobile-hide">Username</th></tr>
@@ -108,18 +116,18 @@
 <tr><th>3</th><td>Larry</td><td>the Bird</td><td class="mobile-hide">@twitter</td></tr>
 </tbody>
 </table>
-</div>
+</section>
 
 
+<section>
 <h2>Buttons</h2>
-<div class="preview">
 <button>Primary</button>
 <button class="extra">Secondary</button>
-</div>
+</section>
 
 
+<section>
 <h2>Forms</h2>
-<div class="preview">
 <form>
 <label for="title">Title</label>
 <div class="select">
@@ -147,10 +155,11 @@
 Two
 Three</textarea>
 </form>
-</div>
+</section>
 
+
+<section>
 <h2>Navbar</h2>
-<div class="preview">
 <nav class="navbar">
     <ul class="nav navbar-nav">
         <li><a href="#home">Home</a></li>
@@ -161,7 +170,38 @@ Three</textarea>
         <li><a href="#logOut">Logout</a></li>
     </ul>
 </nav>
+</section>
+
+
+<section>
+<h2>Grid Layout</h2>
+<div class="row">
+  <div class="col-1-8">.col-1-8</div>
+  <div class="col-1-8">.col-1-8</div>
+  <div class="col-1-8">.col-1-8</div>
+  <div class="col-1-8">.col-1-8</div>
+  <div class="col-1-8">.col-1-8</div>
+  <div class="col-1-8">.col-1-8</div>
+  <div class="col-1-8">.col-1-8</div>
+  <div class="col-1-8">.col-1-8</div>
 </div>
+<div class="row">
+  <div class="col-2-8">.col-2-8</div>
+  <div class="col-6-8">.col-6-8</div>
+</div>
+<div class="row">
+  <div class="col-4-8">.col-4-8</div>
+  <div class="col-4-8">.col-4-8</div>
+</div>
+<div class="row">
+  <div class="col-5-8">.col-5-8</div>
+  <div class="col-3-8">.col-3-8</div>
+</div>
+<div class="row">
+  <div class="col-7-8">.col-7-8</div>
+  <div class="col-1-8">.col-1-8</div>
+</div>
+</section>
 
 </div>
 
