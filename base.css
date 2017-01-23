@@ -66,7 +66,7 @@ pre {
     border: 1px solid #e1e1e8;
     border-radius: 4px;
     font-family: 'Droid Sans Mono', monospace;
-    font-size: 13px;
+    font-size: 12px;
     white-space: -moz-pre-wrap;
     white-space: -pre-wrap;
     white-space: -o-pre-wrap;
@@ -77,6 +77,7 @@ pre {
 /* Form Inputs */
 label {
     display: inline-block;
+    margin-right: 5px;
     margin-bottom: 5px;
     font-weight: 700;
 }
@@ -102,6 +103,22 @@ textarea {
     min-height: 68px;
     overflow: auto;
 }
+.textbox-group {
+    display: table;
+}
+.textbox-group > input {
+    width: 100%;
+    display: table-cell;
+}
+.textbox-buttons {
+    display: table-cell;
+    border: none;
+    width: 1%;
+    font-size: 0;
+    line-height: 0px;
+    white-space: nowrap;
+    vertical-align: top;
+}
 
 input::-webkit-input-placeholder { font-style: italic; color: #a9a9a9; }
 input::-moz-placeholder { font-style: italic; color: #a9a9a9; }
@@ -114,33 +131,39 @@ textarea:focus {
     box-shadow: none;
     outline: none;
 }
-label {
-    margin-right: 5px;
-}
 
+/* Inline Form */
 form.inline label,
 form.inline input,
 form.inline .select,
 form.inline .checkbox,
 form.inline button {
     display: inline-block;
-    vertical-align: middle;
+}
+form.inline .textbox-group {
+    display: inline-table;
 }
 form.inline button {
     margin-bottom: 10px;
+    height: 32px;
 }
 form.inline label,
 form.inline .checkbox,
 form.inline button {
     margin-right: 10px;
 }
-
+form.inline .textbox-buttons button {
+    margin-right: 0;
+}
 
 /* Buttons */
 button {
     background: #a9a9a9;    
     color: #fff;
-    padding: 7px 10px 7px 10px;
+    padding: 15px 10px 15px 10px;
+    box-sizing: border-box;
+    line-height: 0;
+    vertical-align: top;
 }
 button.primary {
     background: #6a6969;
@@ -198,32 +221,36 @@ table>tbody>tr:first-child>th {
 }
 
 /* Custom checkbox */
-.checkbox,
-.checkbox input[type=checkbox] {
-    line-height: 17px;
+.checkbox {
     height: 32px;
     width: 32px;
     border: 1px solid #ddd;
     box-sizing: border-box;
     margin-bottom: 10px;
     cursor: pointer;
+    vertical-align: top;    
 }
 .checkbox input[type=checkbox] {
     opacity: 0;
+    width: 100%;
+    height: 100%;    
+    padding: 0;
+    margin: 0;
+    border: none;
 }
 .checkbox input[type=checkbox]:checked + span:before {
     content: '\2713';
     display: block;
     position: relative;
-    margin-top: -39px;
-    margin-left: 9px;
-    font-size: 18px;
+    margin-top: -30px;
+    margin-left: 10px;
     z-index: -1;
 }
 
 /* Custom select dropdown */
 .select {
     padding: 0;
+    margin-bottom: 10px;
     border: none;
     position: relative;
 }
@@ -300,9 +327,14 @@ select:-moz-focusring {
 
     /* Inline Form */
     form.inline input,
-    form.inline .select {
+    form.inline .select,
+    form.inline .textbox-group {
         width: 200px;
         margin-right: 10px;
+    }
+    form.inline .textbox-group input {
+        width: 100%;
+        margin-right: 0;
     }
 
     /* Navbar */
