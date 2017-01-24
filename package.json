@@ -1,0 +1,22 @@
+{
+  "name": "base-css-theme",
+  "version": "1.0.0",
+  "description": "A simple CSS theme to kick start your project. Provides a consistent responsive style across mobile and desktop browsers for the base HTML elements.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianc1/BaseCSS.git"
+  },
+  "keywords": [
+    "css",
+    "responsive",
+    "theme",
+    "mobile-first",
+    "web"
+  ],
+  "author": "ianc1",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ianc1/BaseCSS/issues"
+  },
+  "homepage": "https://basecss.azurewebsites.net"
+}
