@@ -241,7 +241,7 @@ table>tbody>tr:first-child>th {
     position: absolute;
     right: 0px;
     top: 0px;
-    padding: 6px;
+    padding: 6px 7px 6px 7px;
     margin: 2px;
     color: #2d3239;
     background-color: #FFF;
