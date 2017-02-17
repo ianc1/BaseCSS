@@ -104,7 +104,9 @@ textarea {
     overflow: auto;
 }
 .textbox-group {
+    width: 100%;
     display: table;
+    position: relative;
 }
 .textbox-group > input {
     width: 100%;
@@ -118,6 +120,22 @@ textarea {
     line-height: 0px;
     white-space: nowrap;
     vertical-align: top;
+}
+.textbox-group > .icon {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+}
+.textbox-group > .icon.left ~ input {
+    padding-left: 32px;
+}
+.textbox-group > .icon.right ~ input {
+    padding-right: 32px;
+}
+.textbox-group > .icon.right {
+    right: 0;
 }
 
 input::-webkit-input-placeholder { font-style: italic; color: #a9a9a9; }
