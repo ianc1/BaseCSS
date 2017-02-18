@@ -137,6 +137,14 @@ textarea {
 .textbox-group > .icon.right {
     right: 0;
 }
+input:required:invalid, 
+input:focus:invalid,
+input:required:invalid ~ .icon,
+input:focus:invalid ~ .icon {
+    border-color: #a94442;
+    box-shadow: none;
+    color: #a94442;
+}
 
 input::-webkit-input-placeholder { font-style: italic; color: #a9a9a9; }
 input::-moz-placeholder { font-style: italic; color: #a9a9a9; }

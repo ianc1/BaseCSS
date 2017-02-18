@@ -241,50 +241,6 @@ Two
 Three</textarea>
 </form>
 
-<h4>Inline</h4>
-<form class="inline">
-  <label for="username">Username</label><div class="select">
-    <select id="username" type="text">
-      <option>Mark_Otto</option>
-      <option>Jacob_Thornton</option>
-      <option>Larry_Bird</option>
-    </select>
-  </div>
-
-  <label for="password">Password</label><input id="password" type="password" placeholder="Password" value="xxxxxx">
-
-  <label for="rememberme">Remember Me</label>
-  <div class="checkbox">
-    <input id="rememberme" type="checkbox" checked>
-    <span></span>
-  </div>
-
-  <button class="primary"><i class="icon">forward</i>Sign In</button>
-</form>
-
-<h4>Form Buttons</h4>
-<form class="inline">
-  <label for="url">URL</label>
-  <div class="textbox-group">
-      <input id="url" type="text" value="http://google.com">
-      <div class="textbox-buttons"><button class="primary">Go</button></div>
-  </div>
-</form>
-
-<h4>Texbox icons</h4>
-<form class="inline">
-  <div class="textbox-group">
-    <i class="icon left">phone_android</i>
-    <input type="text" value="0800 123456">
-  </div>
-
-  <div class="textbox-group">
-    <i class="icon left">person</i>
-    <i class="icon right">clear</i>
-    <input type="text" value="Bob Smith">
-  </div>
-</form>
-
 <h5>HTML</h5>
 <pre>
 &lt;form&gt;
@@ -314,8 +270,31 @@ Three</textarea>
 Two
 Three&lt;/textarea&gt;
 &lt;/form&gt;
+</pre>
 
+<h4>Inline Form</h4>
+<form class="inline">
+  <label for="username">Username</label><div class="select">
+    <select id="username" type="text">
+      <option>Mark_Otto</option>
+      <option>Jacob_Thornton</option>
+      <option>Larry_Bird</option>
+    </select>
+  </div>
 
+  <label for="password">Password</label><input id="password" type="password" placeholder="Password" value="xxxxxx">
+
+  <label for="rememberme">Remember Me</label>
+  <div class="checkbox">
+    <input id="rememberme" type="checkbox" checked>
+    <span></span>
+  </div>
+
+  <button class="primary"><i class="icon">forward</i>Sign In</button>
+</form>
+
+<h5>HTML</h5>
+<pre>
 &lt;form class=&quot;inline&quot;&gt;
   &lt;label for=&quot;username&quot;&gt;Username&lt;/label&gt;&lt;div class=&quot;select&quot;&gt;
     &lt;select id=&quot;username&quot; type=&quot;text&quot;&gt;
@@ -335,15 +314,42 @@ Three&lt;/textarea&gt;
 
   &lt;button class=&quot;primary&quot;&gt;&lt;i class=&quot;icon&quot;&gt;forward&lt;/i&gt;Sign In&lt;/button&gt;
 &lt;/form&gt;
+</pre>
 
+<h4>Textbox Buttons</h4>
+<form class="inline">
+  <div class="textbox-group">
+      <input type="url" value="http://google.com">
+      <div class="textbox-buttons"><button class="primary">Go</button></div>
+  </div>
+</form>
+
+<h5>HTML</h5>
+<pre>
 &lt;form class=&quot;inline&quot;&gt;
-  &lt;label for=&quot;url&quot;&gt;URL&lt;/label&gt;
   &lt;div class=&quot;textbox-group&quot;&gt;
-      &lt;input id=&quot;url&quot; type=&quot;text&quot; value=&quot;http://google.com&quot;&gt;
+      &lt;input type=&quot;url&quot; value=&quot;http://google.com&quot;&gt;
       &lt;div class=&quot;textbox-buttons&quot;&gt;&lt;button class=&quot;primary&quot;&gt;Go&lt;/button&gt;&lt;/div&gt;
   &lt;/div&gt;
 &lt;/form&gt;
+</pre>
 
+<h4>Texbox Icons</h4>
+<form class="inline">
+  <div class="textbox-group">
+    <i class="icon left">phone_android</i>
+    <input type="text" value="0800 123456">
+  </div>
+
+  <div class="textbox-group">
+    <i class="icon left">person</i>
+    <i class="icon right">clear</i>
+    <input type="text" value="Bob Smith">
+  </div>
+</form>
+
+<h5>HTML</h5>
+<pre>
 &lt;form class=&quot;inline&quot;&gt;
   &lt;div class=&quot;textbox-group&quot;&gt;
     &lt;i class=&quot;icon left&quot;&gt;phone_android&lt;/i&gt;
@@ -358,13 +364,35 @@ Three&lt;/textarea&gt;
 &lt;/form&gt;
 </pre>
 
+<h4>Texbox Validation</h4>
+<form class="inline">
+  <input type="url" value="http\\www.google.com" required>
+
+  <div class="textbox-group">
+    <input type="email" value="bob@@acme.com" required>
+    <i class="icon right">clear</i>
+  </div>
+</form>
+
+<h5>HTML</h5>
+<pre>
+&lt;form class=&quot;inline&quot;&gt;
+  &lt;input type=&quot;url&quot; value=&quot;http\\www.google.com&quot; required&gt;
+
+  &lt;div class=&quot;textbox-group&quot;&gt;
+    &lt;input type=&quot;email&quot; value=&quot;bob@@acme.com&quot; required&gt;
+    &lt;i class=&quot;icon right&quot;&gt;clear&lt;/i&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+</pre>
+
 </section>
 
 
 <section>
 <h3><a name="Dropdown Menu" href="#DropdownMenu">Dropdown Menu</a></h3>
 <div class="dropdown">
-  <button>Dropdown</button>
+  <button class="primary">Dropdown</button>
   <ul class="dropdown-menu">
     <li><a href="#">Item 1</a></li>
     <li><a href="#">Item 2</a></li>
@@ -375,7 +403,7 @@ Three&lt;/textarea&gt;
 <h5>HTML</h5>
 <pre>
 &lt;div class="dropdown"&gt;
-  &lt;button&gt;Dropdown&lt;/button&gt;
+  &lt;button class="primary"&gt;Dropdown&lt;/button&gt;
   &lt;ul class="dropdown-menu"&gt;
     &lt;li&gt;&lt;a href="#"&gt;Item 1&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href="#"&gt;Item 2&lt;/a&gt;&lt;/li&gt;
