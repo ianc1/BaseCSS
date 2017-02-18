@@ -200,8 +200,9 @@ button i {
     padding: 10px 0 10px 0;
 }
 .icon-button .icon {
-    color: #2d3239;
+    color: #6a6969;
     padding-right: 0;
+    font-size: 24px;
 }
 .icon-button:hover .icon {
     color: #F7882F;
@@ -373,7 +374,6 @@ select:-moz-focusring {
     right: 5px;
     top: 7px;
     position: absolute;
-    font-size: 24px;
 }
 .navbar > .dropdown:focus ~ .nav {
     display: block;
