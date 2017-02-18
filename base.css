@@ -347,6 +347,7 @@ select:-moz-focusring {
     margin-left: auto;
     border-bottom: 1px solid #e1e1e8;
     margin-bottom: 10px;
+    padding-bottom: 10px;
     position: relative;
 }
 .nav {
@@ -363,7 +364,7 @@ select:-moz-focusring {
     padding: 5px 10px 5px 10px;
 }
 .nav li a {
-    font-size: 16px;
+    font-weight: 700;
     text-decoration: none;
 }
 .nav li a:hover,
@@ -396,7 +397,7 @@ select:-moz-focusring {
   cursor: pointer;
 }
 .tabs > input:checked + label {
-  color: #6a6969;
+  color: #2d3239;  
   border: 1px solid #e1e1e8;
   border-top: 2px solid #F7882F;
   border-bottom: 1px solid #fff;
@@ -466,7 +467,7 @@ select:-moz-focusring {
 
     /* Navbar */
     .navbar {
-        height: 50px;
+        height: 40px;
     }
     .navbar .dropdown {
         display: none;
