@@ -379,6 +379,46 @@ select:-moz-focusring {
     display: block;
 }
 
+/* Tabs */
+.tabs > input {
+  display: none;
+}
+.tabs > label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 10px 25px;
+  text-align: center;
+  color: #a9a9a9;
+  border: 1px solid transparent;
+}
+.tabs > label:hover {
+  color: #F7882F;
+  cursor: pointer;
+}
+.tabs > input:checked + label {
+  color: #6a6969;
+  border: 1px solid #e1e1e8;
+  border-top: 2px solid #F7882F;
+  border-bottom: 1px solid #fff;
+}
+.tab {
+  display: none;
+  padding: 20px 0 0;
+  border-top: 1px solid #e1e1e8;
+}
+#tab1:checked ~ #tab1content,
+#tab2:checked ~ #tab2content,
+#tab3:checked ~ #tab3content,
+#tab4:checked ~ #tab4content,
+#tab5:checked ~ #tab5content,
+#tab6:checked ~ #tab6content,
+#tab7:checked ~ #tab7content,
+#tab8:checked ~ #tab8content,
+#tab9:checked ~ #tab9content,
+#tab10:checked ~ #tab10content {
+  display: block;
+}
+
 /* Grid Layout */
 .row:after {
     content: '';
