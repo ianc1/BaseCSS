@@ -416,12 +416,17 @@ Three&lt;/textarea&gt;
 
 <section>
 <h3><a name="Navbar" href="#Navbar">Navbar</a></h3>
-<nav class="navbar">
-    <ul class="nav navbar-nav">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#calendar">Calendar</a></li>
+<nav class="navbar">    
+    <button class="icon-button dropdown"><i class="icon">menu</i></button>
+    <ul class="nav nav-fixed">
+        <li><a href="#home">Acme Corp</a></li>
     </ul>
-    <ul class="nav navbar-nav navbar-right">
+    <ul class="nav">
+        <li><a href="#products">Products</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
+    <ul class="nav nav-right">
         <li><a href="#account">John Smith</a></li>
         <li><a href="#logOut">Logout</a></li>
     </ul>
@@ -429,12 +434,17 @@ Three&lt;/textarea&gt;
 
 <h5>HTML</h5>
 <pre>
-&lt;nav class=&quot;navbar&quot;&gt;
-    &lt;ul class=&quot;nav navbar-nav&quot;&gt;
-        &lt;li&gt;&lt;a href=&quot;#home&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;#calendar&quot;&gt;Calendar&lt;/a&gt;&lt;/li&gt;
+&lt;nav class=&quot;navbar&quot;&gt;    
+    &lt;button class=&quot;icon-button dropdown&quot;&gt;&lt;i class=&quot;icon&quot;&gt;menu&lt;/i&gt;&lt;/button&gt;
+    &lt;ul class=&quot;nav nav-fixed&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#home&quot;&gt;Acme Corp&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
-    &lt;ul class=&quot;nav navbar-nav navbar-right&quot;&gt;
+    &lt;ul class=&quot;nav&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#products&quot;&gt;Products&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#services&quot;&gt;Services&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#about&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul class=&quot;nav nav-right&quot;&gt;
         &lt;li&gt;&lt;a href=&quot;#account&quot;&gt;John Smith&lt;/a&gt;&lt;/li&gt;
         &lt;li&gt;&lt;a href=&quot;#logOut&quot;&gt;Logout&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;

@@ -193,6 +193,20 @@ button i {
     color: #fff;
     padding-right: 7px;
 }
+.icon-button,
+.icon-button:hover {
+    background-color: transparent;
+    border: none;
+    padding: 10px 0 10px 0;
+}
+.icon-button .icon {
+    color: #2d3239;
+    padding-right: 0;
+}
+.icon-button:hover .icon {
+    color: #F7882F;
+}
+
 
 a {
     cursor: pointer;
@@ -332,13 +346,17 @@ select:-moz-focusring {
     margin-left: auto;
     border-bottom: 1px solid #e1e1e8;
     margin-bottom: 10px;
+    position: relative;
 }
 .nav {
     padding: 0;
     margin: 0;
     list-style: none;
     line-height: 20px;
-
+    display: none;
+}
+.nav.nav-fixed {
+    display: block;
 }
 .nav li {
     padding: 5px 10px 5px 10px;
@@ -346,11 +364,19 @@ select:-moz-focusring {
 .nav li a {
     font-size: 16px;
     text-decoration: none;
-    cursor: pointer;
 }
 .nav li a:hover,
 .nav li a.active {
     color: #F7882F;
+}
+.navbar > .dropdown {
+    right: 5px;
+    top: 7px;
+    position: absolute;
+    font-size: 24px;
+}
+.navbar > .dropdown:focus ~ .nav {
+    display: block;
 }
 
 /* Grid Layout */
@@ -402,14 +428,18 @@ select:-moz-focusring {
     .navbar {
         height: 50px;
     }
-    .navbar-nav {
+    .navbar .dropdown {
+        display: none;
+    }
+    .nav {
+        display: block;
         float: left;
     }
     .nav li {
         display: inline-block;
         padding: 15px 10px 15px 10px;
     }
-    .navbar-right {
+    .nav-right {
         float: right!important;
         right: 0;
         left: auto;
