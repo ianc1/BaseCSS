@@ -93,7 +93,7 @@ textarea {
     height: 32px;
     width: 100%;
     padding: 6px 8px 6px 8px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     font-size: inherit;
 }
 select {
@@ -160,7 +160,7 @@ textarea:focus {
 
 /* Inline Form */
 form.inline button {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     height: 32px;
 }
 
@@ -256,7 +256,7 @@ table>tbody>tr:first-child>th {
     width: 32px;
     border: 1px solid #ddd;
     box-sizing: border-box;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     cursor: pointer;
     vertical-align: top;    
 }
@@ -280,7 +280,7 @@ table>tbody>tr:first-child>th {
 /* Custom select dropdown */
 .select {
     padding: 0;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     border: none;
     position: relative;
 }
