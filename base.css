@@ -365,10 +365,9 @@ select:-moz-focusring {
     margin: 0;
     list-style: none;
     line-height: 20px;
-    display: none;
 }
-.nav.nav-fixed {
-    display: block;
+.nav-collapse {
+    display: none;
 }
 .nav li {
     padding: 5px 10px 5px 10px;
@@ -386,10 +385,10 @@ select:-moz-focusring {
     top: 7px;
     position: absolute;
 }
-.navbar > .dropdown:focus ~ .nav {
+.navbar > .dropdown:focus ~ .nav-collapse {
     display: block;
 }
-.nav:hover {
+.nav-collapse:hover {
     display: block;
 }
 
@@ -485,8 +484,10 @@ select:-moz-focusring {
     .navbar .dropdown {
         display: none;
     }
+    .nav-collapse {
+        display: block;        
+    }
     .nav {
-        display: block;
         float: left;
     }
     .nav li {
