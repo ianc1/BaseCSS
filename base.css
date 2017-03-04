@@ -331,6 +331,9 @@ select:-moz-focusring {
     border: 1px solid #ccc;
     box-shadow: 0 6px 12px rgba(0,0,0,.175);
 }
+.dropdown-menu:hover {
+    display: block;
+}
 .dropdown-menu a {
     text-decoration: none;
     display: block;
@@ -383,6 +386,9 @@ select:-moz-focusring {
     position: absolute;
 }
 .navbar > .dropdown:focus ~ .nav {
+    display: block;
+}
+.nav:hover {
     display: block;
 }
 
