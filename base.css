@@ -183,6 +183,9 @@ button:hover {
     cursor: pointer;
     background-color: #F7882F;
 }
+button::-moz-focus-inner {
+    border: 0; /* Remove dotted focus border */
+}
 i.icon {
     font-family: 'Material Icons';
     font-style: normal;
@@ -215,6 +218,9 @@ a {
 a:hover,
 a:hover span {
     color: #F7882F;
+}
+a:focus {
+    outline: 0; /* Remove dotted focus border */
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     text-decoration: none;
