@@ -408,7 +408,7 @@ select:-moz-focusring {
   color: #2d3239;  
   border: 1px solid #e1e1e8;
   border-top: 2px solid #F7882F;
-  border-bottom: 1px solid #fff;
+  border-bottom: 2px solid #fff;
 }
 .tab {
   display: none;
