@@ -76,10 +76,10 @@ pre {
 
 /* Form Inputs */
 label {
+    font-weight: bold;
     display: inline-block;
     margin-right: 5px;
     margin-bottom: 5px;
-    font-weight: 700;
 }
 
 input,
@@ -184,7 +184,7 @@ button:hover {
     background-color: #F7882F;
 }
 button::-moz-focus-inner {
-    border: 0; /* Remove dotted focus border */
+    border: 0;
 }
 i.icon {
     font-family: 'Material Icons';
@@ -220,7 +220,7 @@ a:hover span {
     color: #F7882F;
 }
 a:focus {
-    outline: 0; /* Remove dotted focus border */
+    outline: 0;
 }
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     text-decoration: none;
@@ -237,6 +237,7 @@ th {
     padding: 8px;
 }
 table>thead>tr>th {
+    font-weight: bold;
     border-bottom: 2px solid #ddd;
 }
 table>tbody>tr>td,
@@ -373,8 +374,8 @@ select:-moz-focusring {
     padding: 5px 10px 5px 10px;
 }
 .nav li a {
-    font-weight: 700;
     text-decoration: none;
+    font-weight: bold;
 }
 .nav li a:hover,
 .nav li a.active {
