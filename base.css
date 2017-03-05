@@ -269,11 +269,13 @@ table>tbody>tr:first-child>th {
     border: none;
 }
 .checkbox input[type=checkbox]:checked + span:before {
-    content: '\2713';
+    content: '\E5CA';
+    font-family: 'Material Icons';
+    font-size: 22px;
     display: block;
     position: relative;
-    margin-top: -30px;
-    margin-left: 10px;
+    margin-top: -36px;
+    margin-left: 4px;
     z-index: -1;
 }
 
@@ -285,13 +287,15 @@ table>tbody>tr:first-child>th {
     position: relative;
 }
 .select:after {
-    content: '\25BC';
+    content: '\E313';
+    font-family: 'Material Icons';
+    font-size: 22px;
+    color: #2d3239;
     position: absolute;
     right: 0px;
     top: 0px;
-    padding: 6px 7px 6px 7px;
+    padding: 6px 3px;
     margin: 2px;
-    color: #2d3239;
     background-color: #FFF;
     pointer-events: none;
 }
