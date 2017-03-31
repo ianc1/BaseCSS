@@ -74,7 +74,7 @@ pre {
     word-wrap: break-word;
 }
 
-/* Form Inputs */
+/* Forms */
 label {
     font-weight: bold;
     display: inline-block;
@@ -103,14 +103,28 @@ textarea {
     min-height: 68px;
     overflow: auto;
 }
+form button {
+    margin-bottom: 15px;
+    height: 32px;
+}
+
+.form-group,
 .textbox-group {
     width: 100%;
     display: table;
     position: relative;
 }
+.form-group > .select > select {
+    border-right: 0;
+}
+.form-group > input,
+.form-group > .select,
 .textbox-group > input {
-    width: 100%;
     display: table-cell;
+}
+.form-group > .select {
+    width: 75px;
+    vertical-align: top;
 }
 .textbox-buttons {
     display: table-cell;
@@ -138,9 +152,7 @@ textarea {
     right: 0;
 }
 input:required:invalid, 
-input:focus:invalid,
-input:required:invalid ~ .icon,
-input:focus:invalid ~ .icon {
+input:focus:invalid {
     border-color: #a94442;
     box-shadow: none;
     color: #a94442;
@@ -156,12 +168,6 @@ textarea:focus {
     border-color: #F7882F;
     box-shadow: none;
     outline: none;
-}
-
-/* Inline Form */
-form.inline button {
-    margin-bottom: 15px;
-    height: 32px;
 }
 
 /* Buttons */
@@ -192,9 +198,8 @@ i.icon {
     vertical-align: bottom;
     font-feature-settings: 'liga' 1
 }
-button i {
+button .icon {
     color: #fff;
-    padding-right: 7px;
 }
 .icon-button,
 .icon-button:hover {
@@ -211,7 +216,7 @@ button i {
     color: #F7882F;
 }
 
-
+/* Links */
 a {
     cursor: pointer;
 }
@@ -457,24 +462,31 @@ select:-moz-focusring {
     form.inline .select,
     form.inline .checkbox,
     form.inline button,
+    form.inline .form-group,
     form.inline .textbox-group {
         display: inline-block;
         margin-right: 10px;
     }
-    form.inline .textbox-group input,
+    form.inline .form-group input,
     form.inline .textbox-buttons button {
         margin-right: 0;
     }
-    form.inline .textbox-group {
+    form.inline .form-group {
         display: inline-table;
     }
     form.inline input,
     form.inline .select,
+    form.inline .form-group,
     form.inline .textbox-group {
         width: 200px;
     }
-    form.inline .textbox-group input {
+    form.inline .form-group input,
+    form.inline .form-group .select {
+        display: table-cell;
         width: 100%;
+    }
+    form.inline .form-group .select {
+        width: 75px;
     }
 
     /* Navbar */
