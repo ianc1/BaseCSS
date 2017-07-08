@@ -88,6 +88,8 @@ select,
 textarea {
     background: #fff;
     border: 1px solid #ddd;
+    -webkit-border-radius: 0;
+    border-radius: 0;
     box-sizing: border-box;
     line-height: 17px;
     height: 32px;
@@ -271,7 +273,7 @@ table>tbody>tr:first-child>th {
     box-sizing: border-box;
     margin-bottom: 15px;
     cursor: pointer;
-    vertical-align: top;    
+    vertical-align: top;
 }
 .checkbox input[type=checkbox] {
     opacity: 0;
@@ -505,7 +507,7 @@ select:-moz-focusring {
         display: none;
     }
     .nav-collapse {
-        display: block;        
+        display: block;
     }
     .nav {
         float: left;
