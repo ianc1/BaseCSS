@@ -96,6 +96,14 @@ textarea {
     margin-bottom: 15px;
     font-size: inherit;
 }
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=url],
+input[type=password],
+textarea {
+    -webkit-appearance: none;
+}
 select {
     cursor: pointer;
 }
