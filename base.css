@@ -188,6 +188,7 @@ button {
     box-sizing: border-box;
     line-height: 0;
     vertical-align: top;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 button.primary {
     background: #6a6969;
@@ -229,6 +230,7 @@ button .icon {
 /* Links */
 a {
     cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 a:hover,
 a:hover span {
@@ -330,29 +332,28 @@ select:-moz-focusring {
 /* Dropdown Menu */
 .dropdown {
     position: relative;
-}
-.dropdown button {
-    display: block;
+    display: inline-block;
 }
 .dropdown button:focus {
     background-color: #F7882F;
 }
-.dropdown button:focus ~ .dropdown-menu {
-    display: block;
-}
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    list-style-type: none;
-    min-width: 160px;
-    padding: 0px;
-    margin: 5px 0 0 0;
-    background-color: #fff;
+.dropdown button:focus ~ .dropdown-menu,
+.dropdown-menu.show {
+    max-height: 9999px;
+    transition: max-height .8s cubic-bezier(0.5, 0, 1, 0) -.01s;
     border: 1px solid #ccc;
     box-shadow: 0 6px 12px rgba(0,0,0,.175);
 }
-.dropdown-menu:hover {
-    display: block;
+.dropdown-menu {
+    overflow: hidden;
+    max-height: 0px;
+    transition: max-height .2s cubic-bezier(0, 1, 0, 1) -.01s;
+    position: absolute;
+    list-style-type: none;
+    min-width: 160px;
+    padding: -5px;
+    margin: 5px 0 0 0;
+    background-color: #fff;
 }
 .dropdown-menu a {
     text-decoration: none;
@@ -382,7 +383,9 @@ select:-moz-focusring {
     line-height: 20px;
 }
 .nav-collapse {
-    display: none;
+    overflow: hidden;
+    max-height: 0px;
+    transition: max-height .8s cubic-bezier(0, 1, 0, 1) -.1s;
 }
 .nav li {
     padding: 5px 10px 8px 10px;
@@ -391,7 +394,6 @@ select:-moz-focusring {
     text-decoration: none;
     font-weight: bold;
 }
-.nav li a:hover,
 .nav li a.active {
     color: #F7882F;
 }
@@ -400,11 +402,11 @@ select:-moz-focusring {
     top: 7px;
     position: absolute;
 }
-.navbar > .dropdown:focus ~ .nav-collapse {
-    display: block;
-}
-.nav-collapse:hover {
-    display: block;
+.navbar > .dropdown:focus ~ .nav-collapse,
+.navbar > .nav-collapse.show {
+    max-height: 9999px;
+    transition-timing-function: cubic-bezier(0.5, 0, 1, 0); 
+    transition-delay: 0s;
 }
 
 /* Tabs */
@@ -507,7 +509,7 @@ select:-moz-focusring {
         display: none;
     }
     .nav-collapse {
-        display: block;
+        max-height: 9999px;
     }
     .nav {
         float: left;
