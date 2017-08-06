@@ -89,6 +89,7 @@ textarea {
     background: #fff;
     border: 1px solid #ddd;
     -webkit-border-radius: 0;
+    -webkit-appearance: none;
     border-radius: 0;
     box-sizing: border-box;
     line-height: 17px;
@@ -102,8 +103,7 @@ input[type=text],
 input[type=email],
 input[type=tel],
 input[type=url],
-input[type=password],
-textarea {
+input[type=password] {
     -webkit-appearance: none;
 }
 select {
@@ -182,7 +182,7 @@ textarea:focus {
 
 /* Buttons */
 button {
-    background: #a9a9a9;    
+    background: #a9a9a9;
     color: #fff;
     padding: 15px 10px 15px 10px;
     box-sizing: border-box;
