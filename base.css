@@ -189,6 +189,7 @@ button {
     line-height: 0;
     vertical-align: top;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
+    touch-action: manipulation;
 }
 button.primary {
     background: #6a6969;
@@ -222,6 +223,7 @@ button .icon {
     color: #6a6969;
     padding-right: 0;
     font-size: 24px;
+    touch-action: manipulation;
 }
 .icon-button:hover .icon {
     color: #F7882F;
@@ -231,6 +233,7 @@ button .icon {
 a {
     cursor: pointer;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
+    touch-action: manipulation;
 }
 a:hover,
 a:hover span {
@@ -276,6 +279,7 @@ table>tbody>tr:first-child>th {
     margin-bottom: 15px;
     cursor: pointer;
     vertical-align: top;
+    touch-action: manipulation;
 }
 .checkbox input[type=checkbox] {
     opacity: 0;
@@ -302,6 +306,7 @@ table>tbody>tr:first-child>th {
     margin-bottom: 15px;
     border: none;
     position: relative;
+    touch-action: manipulation;
 }
 .select:after {
     content: '\E313';
