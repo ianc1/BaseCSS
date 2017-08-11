@@ -420,7 +420,7 @@ select:-moz-focusring {
 }
 .tabs > label {
     display: inline-block;
-    margin: 0 0 -1px;
+    margin: 1px 0 -1px 0;
     padding: 10px 25px;
     text-align: center;
     color: #a9a9a9;
@@ -434,7 +434,7 @@ select:-moz-focusring {
     color: #2d3239;  
     border: 1px solid #e1e1e8;
     border-top: 2px solid #F7882F;
-    border-bottom: 2px solid #fff;
+    border-bottom: 1px solid #fff;
 }
 .tab {
     display: none;
