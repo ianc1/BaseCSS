@@ -1,10 +1,11 @@
 
-
 (function() {
 
     var isMobileSafari = navigator.userAgent.toLowerCase().match(/(iphone|ipod|ipad)/);
-    
+
     var openMenu = null;
+
+    document.addEventListener('click', dropdown);
 
     if (isMobileSafari) {
         document.addEventListener('touchstart', dropdown);
@@ -18,31 +19,32 @@
         var isButtonClick = target.matches('.dropdown > button') 
             || target.parentNode.matches('.navbar > button');
 
-        if (isButtonClick) {
+        if (event.type === 'click' && isButtonClick) {
             var menu = target.parentNode.querySelector('.dropdown-menu')
                 || target.parentNode.parentNode.querySelector('.nav-collapse');
 
-            // Close open menus first.
+            // Close other open menus first.
             if (openMenu && openMenu !== menu) {
-                toggleMenu(openMenu);
-
-            // Dont close current menu on second button click.
-            } else if (openMenu) {
-                return;
+                toggleDropdownMenu(openMenu);
             }
 
-            // Open clicked menu.
-            toggleMenu(menu);
-            openMenu = menu;
+            // Open/Close clicked menu.
+            toggleDropdownMenu(menu);
+            openMenu = openMenu !== menu ? menu : null;
+        }
 
-        // Close open menu on background click.
-        } else if (openMenu) {
-            toggleMenu(openMenu);
+        // Close open menu on menu item or background click. 
+        // On mobile Safari a background click must be handled with the touchstart event.
+        else if (event.type === 'click' && openMenu 
+                || openMenu && isMobileSafari && !isButtonClick && !openMenu.contains(target)) {
+            toggleDropdownMenu(openMenu);
             openMenu = null;
         }
+
+        return true;
     }
 
-    function toggleMenu(menu) {
+    function toggleDropdownMenu(menu) {
         menu.classList.toggle('show');
     }
 
