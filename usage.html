@@ -611,13 +611,25 @@ Buttons must be wrapped in <code>.textbox-buttons</code>.</p>
 </pre>
 
 <h4>Texbox Validation</h4>
+<p class="info">Use the input attribute <code>required</code> in conjunction with <code>type</code> to highlight invalid fields.
+  Add feedback text using <code>.form-feedback</code> wrapped in <code>.form-group</code> along with the input.</p>
+  </p>
+
 <form class="inline">
   <input type="url" value="http\\www.google.com" required>
 
-  <div class="textbox-group">
-    <i class="icon left">person</i>
-    <i class="icon right">clear</i>
-    <input type="email" value="bob@@acme.com" required>
+  <div class="form-group">
+    <div class="textbox-group">
+      <i class="icon left">person</i>
+      <i class="icon right">clear</i>
+      <input type="email" value="bob@@acme.com" required>
+    </div>
+    <div class="form-feedback invalid">Invalid email address</div>
+  </div>
+
+  <div class="form-group">
+    <input type="email" value="bob@acme.com" required>
+    <div class="form-feedback">Enter a work email address</div>
   </div>
 </form>
 
@@ -626,12 +638,20 @@ Buttons must be wrapped in <code>.textbox-buttons</code>.</p>
 &lt;form class=&quot;inline&quot;&gt;
   &lt;input type=&quot;url&quot; value=&quot;http\\www.google.com&quot; required&gt;
 
-  &lt;div class=&quot;textbox-group&quot;&gt;
-    &lt;i class=&quot;icon left&quot;&gt;person&lt;/i&gt;
-    &lt;i class=&quot;icon right&quot;&gt;clear&lt;/i&gt;
-    &lt;input type=&quot;email&quot; value=&quot;bob@@acme.com&quot; required&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;div class=&quot;textbox-group&quot;&gt;
+      &lt;i class=&quot;icon left&quot;&gt;person&lt;/i&gt;
+      &lt;i class=&quot;icon right&quot;&gt;clear&lt;/i&gt;
+      &lt;input type=&quot;email&quot; value=&quot;bob@@acme.com&quot; required&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-feedback invalid&quot;&gt;Invalid email address&lt;/div&gt;
   &lt;/div&gt;
-&lt;/form&gt;
+
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;input type=&quot;email&quot; value=&quot;bob@acme.com&quot; required&gt;
+    &lt;div class=&quot;form-feedback&quot;&gt;Enter a work email address&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
 </pre>
 
 </section>
