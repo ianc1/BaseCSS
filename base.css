@@ -124,7 +124,14 @@ form button {
     display: table;
     position: relative;
 }
-.form-group > .select > select {
+.form-group > .select:not(:first-child):not(:last-child) > select {
+    border-left: 0;
+    border-right: 0;
+}
+.form-group > .select:not(:first-child) > select {
+    border-left: 0;
+}
+.form-group > .select:not(:last-child) > select {
     border-right: 0;
 }
 .form-group > input,

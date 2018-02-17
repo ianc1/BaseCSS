@@ -20,6 +20,9 @@
       border: 1px solid #ebeaea;
       background-color: #fafafa;
     }
+    #locationFormGroup .select {
+      width: 40%;
+    }
     </style>
 </head>
 
@@ -391,6 +394,19 @@ Buttons must be wrapped in <code>.textbox-buttons</code>.</p>
     </div>
     <input type="text" value="Smith">
   </div>
+
+  <div class="form-group" id="locationFormGroup">
+    <input type="text" id="city" value="City">
+    <div class="select">
+      <select id="state" type="text">
+        <option>State</option>
+        <option>California</option>
+        <option>Massachusetts</option>
+        <option>Texas</option>
+        <option>Washington</option>
+      </select>
+    </div>
+  </div>
 </form>
 
 <h5>HTML</h5>
@@ -448,6 +464,19 @@ Buttons must be wrapped in <code>.textbox-buttons</code>.</p>
       &lt;input type=&quot;text&quot; value=&quot;Smith&quot;&gt;
     &lt;/div&gt;
   &lt;/form&gt;
+
+  &lt;div class=&quot;form-group&quot; id=&quot;locationFormGroup&quot;&gt;
+    &lt;input type=&quot;text&quot; id=&quot;city&quot; value=&quot;City&quot;&gt;
+    &lt;div class=&quot;select&quot;&gt;
+      &lt;select id=&quot;state&quot; type=&quot;text&quot;&gt;
+        &lt;option&gt;State&lt;/option&gt;
+        &lt;option&gt;California&lt;/option&gt;
+        &lt;option&gt;Massachusetts&lt;/option&gt;
+        &lt;option&gt;Texas&lt;/option&gt;
+        &lt;option&gt;Washington&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 </pre>
 
 <h4>Texbox Icons</h4>
