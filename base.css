@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Droid+Sans+Mono');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
-body, h1, h2, h3, h4, h5, h6, section, p, pre, input, select, textarea, button, a, span, label {
+body, h1, h2, h3, h4, h5, h6, section, p, pre, code, input, select, textarea, button, a, span, label {
     margin: 0;
     padding: 0;
     border: 0;
@@ -144,6 +144,10 @@ form button {
     line-height: 0px;
     white-space: nowrap;
     vertical-align: top;
+}
+/* Chrome v63 workaround. Removes whitespace between left button and text input. */
+.form-group > .textbox-buttons:first-of-type > button {
+    margin-right: -1px;
 }
 .textbox-group > .icon {
     position: absolute;

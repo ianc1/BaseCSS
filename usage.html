@@ -11,6 +11,15 @@
         border: 1px dashed #e1e1e8;
         padding: 10px;
     }
+    .info {
+      margin-bottom: 30px;
+      line-height: 2;
+    }
+    code {
+      padding: 2px 4px;
+      border: 1px solid #ebeaea;
+      background-color: #fafafa;
+    }
     </style>
 </head>
 
@@ -326,6 +335,12 @@ Three&lt;/textarea&gt;
 </pre>
 
 <h4>Form Groups</h4>
+<p class="info">Use <code>.form-group</code> to join multiple form controls together to create a custom control.
+Buttons must be wrapped in <code>.textbox-buttons</code>.</p>
+</p>
+
+<h5>Stacked</h5>
+
 <form>
   <div class="form-group">
       <input type="url" value="http://google.com">
@@ -352,23 +367,77 @@ Three&lt;/textarea&gt;
   </div>
 </form>
 
+<h5>Inline</h5>
+
+<form class="inline">
+  <div class="form-group">
+    <input type="text" value="Tracking code">
+    <div class="textbox-buttons"><button class="primary"><i class="icon">content_copy</i></button></div>
+  </div>
+
+  <div class="form-group">
+    <div class="textbox-buttons"><button class="primary"><i class="icon">autorenew</i></button></div>
+    <input type="text" value="New Secret">
+    <div class="textbox-buttons"><button class="primary"><i class="icon">content_copy</i></button></div>
+  </div>
+
+  <div class="form-group">
+    <div class="select">
+      <select id="title" type="text">
+        <option>Mr</option>
+        <option>Mrs</option>
+        <option>Miss</option>
+      </select>
+    </div>
+    <input type="text" value="Smith">
+  </div>
+</form>
+
 <h5>HTML</h5>
 <pre>
-&lt;form&gt;
-  &lt;div class=&quot;form-group&quot;&gt;
-      &lt;input type=&quot;url&quot; value=&quot;http://google.com&quot;&gt;
-      &lt;div class=&quot;textbox-buttons&quot;&gt;&lt;button class=&quot;primary&quot;&gt;Go&lt;/button&gt;&lt;/div&gt;
-  &lt;/div&gt;
+  &lt;h5&gt;Stacked&lt;/h5&gt;
 
-  &lt;div class=&quot;form-group&quot;&gt;
-      &lt;input type=&quot;url&quot; value=&quot;http://google.com&quot;&gt;
-      &lt;div class=&quot;textbox-buttons&quot;&gt;
-        &lt;button class=&quot;primary&quot;&gt;&lt;i class=&quot;icon&quot;&gt;file_download&lt;/i&gt;&lt;/button&gt;
-        &lt;button class=&quot;primary&quot;&gt;&lt;i class=&quot;icon&quot;&gt;content_copy&lt;/i&gt;
-      &lt;/button&gt;&lt;/div&gt;
-  &lt;/div&gt;
-
-  &lt;div class=&quot;form-group&quot;&gt;
+  &lt;form&gt;
+    &lt;div class=&quot;form-group&quot;&gt;
+        &lt;input type=&quot;url&quot; value=&quot;http://google.com&quot;&gt;
+        &lt;div class=&quot;textbox-buttons&quot;&gt;&lt;button class=&quot;primary&quot;&gt;Go&lt;/button&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  
+    &lt;div class=&quot;form-group&quot;&gt;
+        &lt;input type=&quot;url&quot; value=&quot;http://google.com&quot;&gt;
+        &lt;div class=&quot;textbox-buttons&quot;&gt;
+          &lt;button class=&quot;primary&quot;&gt;&lt;i class=&quot;icon&quot;&gt;file_download&lt;/i&gt;&lt;/button&gt;
+          &lt;button class=&quot;primary&quot;&gt;&lt;i class=&quot;icon&quot;&gt;content_copy&lt;/i&gt;&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+  
+    &lt;div class=&quot;form-group&quot;&gt;
+        &lt;div class=&quot;select&quot;&gt;
+          &lt;select id=&quot;title&quot; type=&quot;text&quot;&gt;
+            &lt;option&gt;Mr&lt;/option&gt;
+            &lt;option&gt;Mrs&lt;/option&gt;
+            &lt;option&gt;Miss&lt;/option&gt;
+          &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;input type=&quot;text&quot; value=&quot;Smith&quot;&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+  
+  &lt;h5&gt;Inline&lt;/h5&gt;
+  
+  &lt;form class=&quot;inline&quot;&gt;
+    &lt;div class=&quot;form-group&quot;&gt;
+      &lt;input type=&quot;text&quot; value=&quot;Tracking code&quot;&gt;
+      &lt;div class=&quot;textbox-buttons&quot;&gt;&lt;button class=&quot;primary&quot;&gt;&lt;i class=&quot;icon&quot;&gt;content_copy&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  
+    &lt;div class=&quot;form-group&quot;&gt;
+      &lt;div class=&quot;textbox-buttons&quot;&gt;&lt;button class=&quot;primary&quot;&gt;&lt;i class=&quot;icon&quot;&gt;autorenew&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
+      &lt;input type=&quot;text&quot; value=&quot;New Secret&quot;&gt;
+      &lt;div class=&quot;textbox-buttons&quot;&gt;&lt;button class=&quot;primary&quot;&gt;&lt;i class=&quot;icon&quot;&gt;content_copy&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  
+    &lt;div class=&quot;form-group&quot;&gt;
       &lt;div class=&quot;select&quot;&gt;
         &lt;select id=&quot;title&quot; type=&quot;text&quot;&gt;
           &lt;option&gt;Mr&lt;/option&gt;
@@ -377,8 +446,8 @@ Three&lt;/textarea&gt;
         &lt;/select&gt;
       &lt;/div&gt;
       &lt;input type=&quot;text&quot; value=&quot;Smith&quot;&gt;
-  &lt;/div&gt;
-&lt;/form&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
 </pre>
 
 <h4>Texbox Icons</h4>
