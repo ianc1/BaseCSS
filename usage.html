@@ -20,8 +20,17 @@
       border: 1px solid #ebeaea;
       background-color: #fafafa;
     }
-    #locationFormGroup .select {
-      width: 40%;
+    #locationFormGroup .select,
+    #shirtFormGroup .select {
+      width: 33.33%;
+    }
+
+    /* Desktop style overrides */
+    @media (min-width: 1200px) {
+      #locationFormGroup,
+      #shirtFormGroup {
+        width: 300px;
+      }
     }
     </style>
 </head>
@@ -237,7 +246,7 @@ npm install --save-dev base-css-theme
 <form>
 <label for="title">Title</label>
 <div class="select">
-  <select id="title" type="text">
+  <select id="title">
     <option>Mr</option>
     <option>Mrs</option>
     <option>Miss</option>
@@ -267,7 +276,7 @@ Three</textarea>
 &lt;form&gt;
 &lt;label for=&quot;title&quot;&gt;Title&lt;/label&gt;
 &lt;div class=&quot;select&quot;&gt;
-  &lt;select id=&quot;title&quot; type=&quot;text&quot;&gt;
+  &lt;select id=&quot;title&quot;&gt;
     &lt;option&gt;Mr&lt;/option&gt;
     &lt;option&gt;Mrs&lt;/option&gt;
     &lt;option&gt;Miss&lt;/option&gt;
@@ -296,7 +305,7 @@ Three&lt;/textarea&gt;
 <h4>Inline Form</h4>
 <form class="inline">
   <label for="username">Username</label><div class="select">
-    <select id="username" type="text">
+    <select id="username">
       <option>Mark_Otto</option>
       <option>Jacob_Thornton</option>
       <option>Larry_Bird</option>
@@ -318,7 +327,7 @@ Three&lt;/textarea&gt;
 <pre>
 &lt;form class=&quot;inline&quot;&gt;
   &lt;label for=&quot;username&quot;&gt;Username&lt;/label&gt;&lt;div class=&quot;select&quot;&gt;
-    &lt;select id=&quot;username&quot; type=&quot;text&quot;&gt;
+    &lt;select id=&quot;username&quot;&gt;
       &lt;option&gt;Mark_Otto&lt;/option&gt;
       &lt;option&gt;Jacob_Thornton&lt;/option&gt;
       &lt;option&gt;Larry_Bird&lt;/option&gt;
@@ -360,7 +369,7 @@ Buttons must be wrapped in <code>.textbox-buttons</code>.</p>
 
   <div class="form-group">
       <div class="select">
-        <select id="title" type="text">
+        <select id="title">
           <option>Mr</option>
           <option>Mrs</option>
           <option>Miss</option>
@@ -386,7 +395,7 @@ Buttons must be wrapped in <code>.textbox-buttons</code>.</p>
 
   <div class="form-group">
     <div class="select">
-      <select id="title" type="text">
+      <select id="title">
         <option>Mr</option>
         <option>Mrs</option>
         <option>Miss</option>
@@ -398,7 +407,7 @@ Buttons must be wrapped in <code>.textbox-buttons</code>.</p>
   <div class="form-group" id="locationFormGroup">
     <input type="text" id="city" value="City">
     <div class="select">
-      <select id="state" type="text">
+      <select id="state">
         <option>State</option>
         <option>California</option>
         <option>Massachusetts</option>
@@ -406,6 +415,52 @@ Buttons must be wrapped in <code>.textbox-buttons</code>.</p>
         <option>Washington</option>
       </select>
     </div>
+    <div class="select">
+      <select id="country">
+        <option>County</option>
+        <option>US</option>
+        <option>UK</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group" id="shirtFormGroup">
+    <div class="select" id="size">
+      <select>
+        <option>Size</option>
+        <option>Small</option>
+        <option>Medium</option>
+      </select>
+    </div>
+    <input type="text" value="Shirt Text">
+    <div class="select" id="quantity">
+      <select>
+        <option>Qty</option>
+        <option>1</option>
+        <option>2</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group" id="locationFormGroup">
+    <div class="select">
+      <select id="country">
+        <option>County</option>
+        <option>US</option>
+        <option>UK</option>
+      </select>
+    </div>
+    <div class="select">
+      <select id="state">
+        <option>State</option>
+        <option>California</option>
+        <option>Massachusetts</option>
+        <option>Texas</option>
+        <option>Washington</option>
+      </select>
+    </div>
+    <input type="text" id="city" value="City">
+    <div class="textbox-buttons"><button class="primary"><i class="icon">add</i></button></div>
   </div>
 </form>
 
@@ -429,7 +484,7 @@ Buttons must be wrapped in <code>.textbox-buttons</code>.</p>
   
     &lt;div class=&quot;form-group&quot;&gt;
         &lt;div class=&quot;select&quot;&gt;
-          &lt;select id=&quot;title&quot; type=&quot;text&quot;&gt;
+          &lt;select id=&quot;title&quot;&gt;
             &lt;option&gt;Mr&lt;/option&gt;
             &lt;option&gt;Mrs&lt;/option&gt;
             &lt;option&gt;Miss&lt;/option&gt;
@@ -455,7 +510,7 @@ Buttons must be wrapped in <code>.textbox-buttons</code>.</p>
   
     &lt;div class=&quot;form-group&quot;&gt;
       &lt;div class=&quot;select&quot;&gt;
-        &lt;select id=&quot;title&quot; type=&quot;text&quot;&gt;
+        &lt;select id=&quot;title&quot;&gt;
           &lt;option&gt;Mr&lt;/option&gt;
           &lt;option&gt;Mrs&lt;/option&gt;
           &lt;option&gt;Miss&lt;/option&gt;
@@ -463,20 +518,66 @@ Buttons must be wrapped in <code>.textbox-buttons</code>.</p>
       &lt;/div&gt;
       &lt;input type=&quot;text&quot; value=&quot;Smith&quot;&gt;
     &lt;/div&gt;
-  &lt;/form&gt;
-
-  &lt;div class=&quot;form-group&quot; id=&quot;locationFormGroup&quot;&gt;
-    &lt;input type=&quot;text&quot; id=&quot;city&quot; value=&quot;City&quot;&gt;
-    &lt;div class=&quot;select&quot;&gt;
-      &lt;select id=&quot;state&quot; type=&quot;text&quot;&gt;
-        &lt;option&gt;State&lt;/option&gt;
-        &lt;option&gt;California&lt;/option&gt;
-        &lt;option&gt;Massachusetts&lt;/option&gt;
-        &lt;option&gt;Texas&lt;/option&gt;
-        &lt;option&gt;Washington&lt;/option&gt;
-      &lt;/select&gt;
+  
+    &lt;div class=&quot;form-group&quot; id=&quot;locationFormGroup&quot;&gt;
+      &lt;input type=&quot;text&quot; id=&quot;city&quot; value=&quot;City&quot;&gt;
+      &lt;div class=&quot;select&quot;&gt;
+        &lt;select id=&quot;state&quot;&gt;
+          &lt;option&gt;State&lt;/option&gt;
+          &lt;option&gt;California&lt;/option&gt;
+          &lt;option&gt;Massachusetts&lt;/option&gt;
+          &lt;option&gt;Texas&lt;/option&gt;
+          &lt;option&gt;Washington&lt;/option&gt;
+        &lt;/select&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;select&quot;&gt;
+        &lt;select id=&quot;country&quot;&gt;
+          &lt;option&gt;County&lt;/option&gt;
+          &lt;option&gt;US&lt;/option&gt;
+          &lt;option&gt;UK&lt;/option&gt;
+        &lt;/select&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
-  &lt;/div&gt;
+  
+    &lt;div class=&quot;form-group&quot; id=&quot;shirtFormGroup&quot;&gt;
+      &lt;div class=&quot;select&quot; id=&quot;size&quot;&gt;
+        &lt;select&gt;
+          &lt;option&gt;Size&lt;/option&gt;
+          &lt;option&gt;Small&lt;/option&gt;
+          &lt;option&gt;Medium&lt;/option&gt;
+        &lt;/select&gt;
+      &lt;/div&gt;
+      &lt;input type=&quot;text&quot; value=&quot;Shirt Text&quot;&gt;
+      &lt;div class=&quot;select&quot; id=&quot;quantity&quot;&gt;
+        &lt;select&gt;
+          &lt;option&gt;Qty&lt;/option&gt;
+          &lt;option&gt;1&lt;/option&gt;
+          &lt;option&gt;2&lt;/option&gt;
+        &lt;/select&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  
+    &lt;div class=&quot;form-group&quot; id=&quot;locationFormGroup&quot;&gt;
+      &lt;div class=&quot;select&quot;&gt;
+        &lt;select id=&quot;country&quot;&gt;
+          &lt;option&gt;County&lt;/option&gt;
+          &lt;option&gt;US&lt;/option&gt;
+          &lt;option&gt;UK&lt;/option&gt;
+        &lt;/select&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;select&quot;&gt;
+        &lt;select id=&quot;state&quot;&gt;
+          &lt;option&gt;State&lt;/option&gt;
+          &lt;option&gt;California&lt;/option&gt;
+          &lt;option&gt;Massachusetts&lt;/option&gt;
+          &lt;option&gt;Texas&lt;/option&gt;
+          &lt;option&gt;Washington&lt;/option&gt;
+        &lt;/select&gt;
+      &lt;/div&gt;
+      &lt;input type=&quot;text&quot; id=&quot;city&quot; value=&quot;City&quot;&gt;
+      &lt;div class=&quot;textbox-buttons&quot;&gt;&lt;button class=&quot;primary&quot;&gt;&lt;i class=&quot;icon&quot;&gt;add&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
 </pre>
 
 <h4>Texbox Icons</h4>

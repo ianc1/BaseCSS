@@ -124,15 +124,18 @@ form button {
     display: table;
     position: relative;
 }
-.form-group > .select:not(:first-child):not(:last-child) > select {
-    border-left: 0;
-    border-right: 0;
+.form-group > .select:not(:first-child):not(:last-child) > select:not(:focus) {
+    border-left-width: 0;
+    border-right-width: 0;
 }
-.form-group > .select:not(:first-child) > select {
-    border-left: 0;
+.form-group > .select:first-child > select:not(:focus) {
+    border-right-width: 0;
 }
-.form-group > .select:not(:last-child) > select {
-    border-right: 0;
+.form-group > .select:last-child > select:not(:focus) {
+    border-left-width: 0;
+}
+.form-group > .select + .select > select {
+    border-left-width: 1px!important;
 }
 .form-group > input,
 .form-group > .select,
