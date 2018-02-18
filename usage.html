@@ -242,7 +242,7 @@ npm install --save-dev base-css-theme
 
 <section>
 <h3><a name="Forms" href="#Forms">Forms</a></h3>
-<h4>Basic</h4>
+<h4>Stacked Form</h4>
 <form>
 <label for="title">Title</label>
 <div class="select">
@@ -612,13 +612,13 @@ Buttons must be wrapped in <code>.textbox-buttons</code>.</p>
 
 <h4>Texbox Validation</h4>
 <p class="info">Use the input attribute <code>required</code> in conjunction with <code>type</code> to highlight invalid fields.
-  Add feedback text using <code>.form-feedback</code> wrapped in <code>.form-group</code> along with the input.</p>
+  Add feedback text using <code>.form-feedback</code> wrapped in <code>.field</code> along with the input.</p>
   </p>
 
 <form class="inline">
   <input type="url" value="http\\www.google.com" required>
 
-  <div class="form-group">
+  <div class="field">
     <div class="textbox-group">
       <i class="icon left">person</i>
       <i class="icon right">clear</i>
@@ -627,7 +627,7 @@ Buttons must be wrapped in <code>.textbox-buttons</code>.</p>
     <div class="form-feedback invalid">Invalid email address</div>
   </div>
 
-  <div class="form-group">
+  <div class="field">
     <input type="email" value="bob@acme.com" required>
     <div class="form-feedback">Enter a work email address</div>
   </div>
@@ -638,7 +638,7 @@ Buttons must be wrapped in <code>.textbox-buttons</code>.</p>
 &lt;form class=&quot;inline&quot;&gt;
   &lt;input type=&quot;url&quot; value=&quot;http\\www.google.com&quot; required&gt;
 
-  &lt;div class=&quot;form-group&quot;&gt;
+  &lt;div class=&quot;field&quot;&gt;
     &lt;div class=&quot;textbox-group&quot;&gt;
       &lt;i class=&quot;icon left&quot;&gt;person&lt;/i&gt;
       &lt;i class=&quot;icon right&quot;&gt;clear&lt;/i&gt;
@@ -647,7 +647,7 @@ Buttons must be wrapped in <code>.textbox-buttons</code>.</p>
     &lt;div class=&quot;form-feedback invalid&quot;&gt;Invalid email address&lt;/div&gt;
   &lt;/div&gt;
 
-  &lt;div class=&quot;form-group&quot;&gt;
+  &lt;div class=&quot;field&quot;&gt;
     &lt;input type=&quot;email&quot; value=&quot;bob@acme.com&quot; required&gt;
     &lt;div class=&quot;form-feedback&quot;&gt;Enter a work email address&lt;/div&gt;
   &lt;/div&gt;

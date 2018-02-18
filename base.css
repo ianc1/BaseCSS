@@ -96,7 +96,7 @@ textarea {
     height: 32px;
     width: 100%;
     padding: 6px 8px 6px 8px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     font-size: inherit;
 }
 input[type=text],
@@ -114,7 +114,7 @@ textarea {
     overflow: auto;
 }
 form button {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     height: 32px;
 }
 
@@ -124,18 +124,15 @@ form button {
     display: table;
     position: relative;
 }
-.form-group > .select:not(:first-child):not(:last-child) > select:not(:focus) {
-    border-left-width: 0;
+.form-group > input:not(:last-child):not(:focus),
+.form-group > .select:not(:last-child) > select:not(:focus) {
     border-right-width: 0;
 }
-.form-group > .select:first-child > select:not(:focus) {
-    border-right-width: 0;
-}
-.form-group > .select:last-child > select:not(:focus) {
+.form-group > button + input:not(:focus),
+.form-group > button + .select > select:not(:focus),
+.form-group > .textbox-buttons + input:not(:focus),
+.form-group > .textbox-buttons + .select > select:not(:focus) {
     border-left-width: 0;
-}
-.form-group > .select + .select > select {
-    border-left-width: 1px!important;
 }
 .form-group > input,
 .form-group > .select,
@@ -155,11 +152,13 @@ form button {
     white-space: nowrap;
     vertical-align: top;
 }
+.field > .form-feedback,
 .form-group > .form-feedback {
+    position: absolute;
     font-size: 10px;
-    margin-top: -10px;
-    margin-bottom: 10px;
+    margin-top: -23px;
 }
+.field > .form-feedback.invalid,
 .form-group > .form-feedback.invalid {
     color: #a94442;
 }
@@ -298,7 +297,7 @@ table>tbody>tr:first-child>th {
     width: 32px;
     border: 1px solid #ddd;
     box-sizing: border-box;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     cursor: pointer;
     vertical-align: top;
     touch-action: manipulation;
@@ -306,7 +305,7 @@ table>tbody>tr:first-child>th {
 .checkbox input[type=checkbox] {
     opacity: 0;
     width: 100%;
-    height: 100%;    
+    height: 100%;
     padding: 0;
     margin: 0;
     border: none;
@@ -325,7 +324,7 @@ table>tbody>tr:first-child>th {
 /* Custom select dropdown */
 .select {
     padding: 0;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     border: none;
     position: relative;
     touch-action: manipulation;
@@ -508,6 +507,7 @@ select:-moz-focusring {
 @media (min-width: 1200px) {
 
     /* Inline Form */
+    form.inline .field,
     form.inline label,
     form.inline input,
     form.inline .select,
@@ -526,6 +526,7 @@ select:-moz-focusring {
     form.inline .form-group {
         display: inline-table;
     }
+    form.inline .field,
     form.inline input,
     form.inline .select,
     form.inline .form-group,
