@@ -118,32 +118,32 @@ form button {
     height: 32px;
 }
 
-.form-group,
-.textbox-group {
+.field-group,
+.field-icons {
     width: 100%;
     display: table;
     position: relative;
 }
-.form-group > input:not(:last-child):not(:focus),
-.form-group > .select:not(:last-child) > select:not(:focus) {
+.field-group > input:not(:last-child):not(:focus),
+.field-group > .select:not(:last-child) > select:not(:focus) {
     border-right-width: 0;
 }
-.form-group > button + input:not(:focus),
-.form-group > button + .select > select:not(:focus),
-.form-group > .textbox-buttons + input:not(:focus),
-.form-group > .textbox-buttons + .select > select:not(:focus) {
+.field-group > button + input:not(:focus),
+.field-group > button + .select > select:not(:focus),
+.field-group > .field-buttons + input:not(:focus),
+.field-group > .field-buttons + .select > select:not(:focus) {
     border-left-width: 0;
 }
-.form-group > input,
-.form-group > .select,
-.textbox-group > input {
+.field-group > input,
+.field-group > .select,
+.field-icons > input {
     display: table-cell;
 }
-.form-group > .select {
+.field-group > .select {
     width: 33.33%;
     vertical-align: top;
 }
-.textbox-buttons {
+.field-buttons {
     display: table-cell;
     border: none;
     width: 1%;
@@ -152,34 +152,34 @@ form button {
     white-space: nowrap;
     vertical-align: top;
 }
-.field > .form-feedback,
-.form-group > .form-feedback {
+.field > .field-feedback,
+.field-group > .field-feedback {
     position: absolute;
     font-size: 10px;
     margin-top: -23px;
 }
-.field > .form-feedback.invalid,
-.form-group > .form-feedback.invalid {
+.field > .field-feedback.invalid,
+.field-group > .field-feedback.invalid {
     color: #a94442;
 }
 /* Chrome v63 workaround. Removes whitespace between left button and text input. */
-.form-group > .textbox-buttons:first-of-type > button {
+.field-group > .field-buttons:first-of-type > button {
     margin-right: -1px;
 }
-.textbox-group > .icon {
+.field-icons > .icon {
     position: absolute;
     width: 32px;
     height: 32px;
     line-height: 32px;
     text-align: center;
 }
-.textbox-group > .icon.left ~ input {
+.field-icons > .icon.left ~ input {
     padding-left: 32px;
 }
-.textbox-group > .icon.right ~ input {
+.field-icons > .icon.right ~ input {
     padding-right: 32px;
 }
-.textbox-group > .icon.right {
+.field-icons > .icon.right {
     right: 0;
 }
 input:required:invalid, 
@@ -506,7 +506,7 @@ select:-moz-focusring {
 /* Desktop style overrides */
 @media (min-width: 1200px) {
     /* Stacked Form */
-    form .form-group .select {
+    form .field-group .select {
         width: 20%;
     }
 
@@ -517,36 +517,36 @@ select:-moz-focusring {
     form.inline .select,
     form.inline .checkbox,
     form.inline button,
-    form.inline .form-group,
-    form.inline .textbox-group {
+    form.inline .field-group,
+    form.inline .field-icons {
         display: inline-block;
         margin-right: 10px;
     }
-    form.inline .form-group input,
-    form.inline .textbox-buttons button,
-    form.inline .form-group .textbox-group {
+    form.inline .field-group input,
+    form.inline .field-buttons button,
+    form.inline .field-group .field-icons {
         margin-right: 0;
     }
-    form.inline .form-group {
+    form.inline .field-group {
         display: inline-table;
     }
     form.inline .field,
     form.inline input,
     form.inline .select,
-    form.inline .form-group,
-    form.inline .textbox-group {
+    form.inline .field-group,
+    form.inline .field-icons {
         width: 200px;
     }
-    form.inline .form-group input,
-    form.inline .form-group .select,
-    form.inline .form-group .textbox-group {
+    form.inline .field-group input,
+    form.inline .field-group .select,
+    form.inline .field-group .field-icons {
         display: table-cell;
         width: 100%;
     }
-    form.inline .form-group .textbox-group input {
+    form.inline .field-group .field-icons input {
         display: inline-block;
     }
-    form.inline .form-group .select {
+    form.inline .field-group .select {
         width: 33.33%;
     }
 

@@ -69,7 +69,7 @@ npm install --save-dev base-css-theme
 
 <section>
 <h3><a name="Viewport" href="#Viewport">Viewport</a></h3>
-<p>Base CSS is mobile first. To ensure proper rendering and touch zooming, add the viewport meta tag to your &lt;head&gt;.</p>
+<p class="info">Base CSS is mobile first. To ensure proper rendering and touch zooming, add the <code>viewport</code> meta tag inside the <code>head</code> element.</p>
 <pre>
 &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&gt;
 </pre>
@@ -78,7 +78,7 @@ npm install --save-dev base-css-theme
 
 <section>
 <h3><a name="Container" href="#Container">Container</a></h3>
-<p>Use .container for a responsive fixed width container.</p>
+<p class="info">Use <code>container</code> for a responsive fixed width container.</p>
 <pre>
 &lt;div class=&quot;container&quot;&gt;
   ...
@@ -238,6 +238,9 @@ npm install --save-dev base-css-theme
 
 <section>
 <h3><a name="Forms" href="#Forms">Forms</a></h3>
+<p class="info">Forms use a full width stacked layout by default on all screen sizes. Add <code>inline</code> to the form to switch to a horizonal
+ layout on large displays.</p>
+
 <h4>Stacked Form</h4>
 <form>
 <label for="title">Title</label>
@@ -298,7 +301,10 @@ Three&lt;/textarea&gt;
 &lt;/form&gt;
 </pre>
 
-<h4>Inline Form</h4>
+<h4>Inline</h4>
+<p class="info">Add <code>inline</code> to the form to use an horizonal inline layout on large displays and a
+ stacked layout on smaller displays.</p>
+
 <form class="inline">
   <label for="username">Username</label><div class="select">
     <select id="username">
@@ -342,28 +348,27 @@ Three&lt;/textarea&gt;
 &lt;/form&gt;
 </pre>
 
-<h4>Form Groups</h4>
-<p class="info">Use <code>.form-group</code> to join multiple form controls together to create a custom control.
-Buttons must be wrapped in <code>.textbox-buttons</code>.</p>
-</p>
+<h4>Field Groups</h4>
+<p class="info">Use the <code>field-group</code> container to join multiple form fields together to create a custom field.
+Buttons must be inside a <code>field-buttons</code> container.</p>
 
 <h5>Stacked</h5>
 
 <form>
-  <div class="form-group">
+  <div class="field-group">
       <input type="url" value="http://google.com">
-      <div class="textbox-buttons"><button class="primary">Go</button></div>
+      <div class="field-buttons"><button class="primary">Go</button></div>
   </div>
 
-  <div class="form-group">
+  <div class="field-group">
       <input type="url" value="http://google.com">
-      <div class="textbox-buttons">
+      <div class="field-buttons">
         <button class="primary"><i class="icon">file_download</i></button>
         <button class="primary"><i class="icon">content_copy</i></button>
       </div>
   </div>
 
-  <div class="form-group">
+  <div class="field-group">
       <div class="select">
         <select id="title">
           <option>Mr</option>
@@ -378,18 +383,18 @@ Buttons must be wrapped in <code>.textbox-buttons</code>.</p>
 <h5>Inline</h5>
 
 <form class="inline">
-  <div class="form-group">
+  <div class="field-group">
     <input type="text" value="Tracking code">
-    <div class="textbox-buttons"><button class="primary"><i class="icon">content_copy</i></button></div>
+    <div class="field-buttons"><button class="primary"><i class="icon">content_copy</i></button></div>
   </div>
 
-  <div class="form-group">
-    <div class="textbox-buttons"><button class="primary"><i class="icon">autorenew</i></button></div>
+  <div class="field-group">
+    <div class="field-buttons"><button class="primary"><i class="icon">autorenew</i></button></div>
     <input type="text" value="New Secret">
-    <div class="textbox-buttons"><button class="primary"><i class="icon">content_copy</i></button></div>
+    <div class="field-buttons"><button class="primary"><i class="icon">content_copy</i></button></div>
   </div>
 
-  <div class="form-group">
+  <div class="field-group">
     <div class="select">
       <select id="title">
         <option>Mr</option>
@@ -397,13 +402,13 @@ Buttons must be wrapped in <code>.textbox-buttons</code>.</p>
         <option>Miss</option>
       </select>
     </div>
-    <div class="textbox-group">
+    <div class="field-icons">
       <i class="icon left">person</i>
       <input type="text" value="Smith" required>
     </div>
   </div>
 
-  <div class="form-group" id="locationFormGroup">
+  <div class="field-group" id="locationFormGroup">
     <input type="text" id="city" value="City">
     <div class="select">
       <select id="state">
@@ -423,7 +428,7 @@ Buttons must be wrapped in <code>.textbox-buttons</code>.</p>
     </div>
   </div>
 
-  <div class="form-group" id="shirtFormGroup">
+  <div class="field-group" id="shirtFormGroup">
     <div class="select" id="size">
       <select>
         <option>Size</option>
@@ -441,7 +446,7 @@ Buttons must be wrapped in <code>.textbox-buttons</code>.</p>
     </div>
   </div>
 
-  <div class="form-group" id="locationFormGroup">
+  <div class="field-group" id="locationFormGroup">
     <div class="select">
       <select id="country">
         <option>County</option>
@@ -459,7 +464,7 @@ Buttons must be wrapped in <code>.textbox-buttons</code>.</p>
       </select>
     </div>
     <input type="text" id="city" value="City">
-    <div class="textbox-buttons"><button class="primary"><i class="icon">add</i></button></div>
+    <div class="field-buttons"><button class="primary"><i class="icon">add</i></button></div>
   </div>
 </form>
 
@@ -468,20 +473,20 @@ Buttons must be wrapped in <code>.textbox-buttons</code>.</p>
   &lt;h5&gt;Stacked&lt;/h5&gt;
 
   &lt;form&gt;
-    &lt;div class=&quot;form-group&quot;&gt;
+    &lt;div class=&quot;field-group&quot;&gt;
         &lt;input type=&quot;url&quot; value=&quot;http://google.com&quot;&gt;
-        &lt;div class=&quot;textbox-buttons&quot;&gt;&lt;button class=&quot;primary&quot;&gt;Go&lt;/button&gt;&lt;/div&gt;
+        &lt;div class=&quot;field-buttons&quot;&gt;&lt;button class=&quot;primary&quot;&gt;Go&lt;/button&gt;&lt;/div&gt;
     &lt;/div&gt;
   
-    &lt;div class=&quot;form-group&quot;&gt;
+    &lt;div class=&quot;field-group&quot;&gt;
         &lt;input type=&quot;url&quot; value=&quot;http://google.com&quot;&gt;
-        &lt;div class=&quot;textbox-buttons&quot;&gt;
+        &lt;div class=&quot;field-buttons&quot;&gt;
           &lt;button class=&quot;primary&quot;&gt;&lt;i class=&quot;icon&quot;&gt;file_download&lt;/i&gt;&lt;/button&gt;
           &lt;button class=&quot;primary&quot;&gt;&lt;i class=&quot;icon&quot;&gt;content_copy&lt;/i&gt;&lt;/button&gt;
         &lt;/div&gt;
     &lt;/div&gt;
   
-    &lt;div class=&quot;form-group&quot;&gt;
+    &lt;div class=&quot;field-group&quot;&gt;
         &lt;div class=&quot;select&quot;&gt;
           &lt;select id=&quot;title&quot;&gt;
             &lt;option&gt;Mr&lt;/option&gt;
@@ -496,18 +501,18 @@ Buttons must be wrapped in <code>.textbox-buttons</code>.</p>
   &lt;h5&gt;Inline&lt;/h5&gt;
   
   &lt;form class=&quot;inline&quot;&gt;
-    &lt;div class=&quot;form-group&quot;&gt;
+    &lt;div class=&quot;field-group&quot;&gt;
       &lt;input type=&quot;text&quot; value=&quot;Tracking code&quot;&gt;
-      &lt;div class=&quot;textbox-buttons&quot;&gt;&lt;button class=&quot;primary&quot;&gt;&lt;i class=&quot;icon&quot;&gt;content_copy&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
+      &lt;div class=&quot;field-buttons&quot;&gt;&lt;button class=&quot;primary&quot;&gt;&lt;i class=&quot;icon&quot;&gt;content_copy&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
     &lt;/div&gt;
   
-    &lt;div class=&quot;form-group&quot;&gt;
-      &lt;div class=&quot;textbox-buttons&quot;&gt;&lt;button class=&quot;primary&quot;&gt;&lt;i class=&quot;icon&quot;&gt;autorenew&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
+    &lt;div class=&quot;field-group&quot;&gt;
+      &lt;div class=&quot;field-buttons&quot;&gt;&lt;button class=&quot;primary&quot;&gt;&lt;i class=&quot;icon&quot;&gt;autorenew&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
       &lt;input type=&quot;text&quot; value=&quot;New Secret&quot;&gt;
-      &lt;div class=&quot;textbox-buttons&quot;&gt;&lt;button class=&quot;primary&quot;&gt;&lt;i class=&quot;icon&quot;&gt;content_copy&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
+      &lt;div class=&quot;field-buttons&quot;&gt;&lt;button class=&quot;primary&quot;&gt;&lt;i class=&quot;icon&quot;&gt;content_copy&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
     &lt;/div&gt;
   
-    &lt;div class=&quot;form-group&quot;&gt;
+    &lt;div class=&quot;field-group&quot;&gt;
       &lt;div class=&quot;select&quot;&gt;
         &lt;select id=&quot;title&quot;&gt;
           &lt;option&gt;Mr&lt;/option&gt;
@@ -515,13 +520,13 @@ Buttons must be wrapped in <code>.textbox-buttons</code>.</p>
           &lt;option&gt;Miss&lt;/option&gt;
         &lt;/select&gt;
       &lt;/div&gt;
-      &lt;div class=&quot;textbox-group&quot;&gt;
+      &lt;div class=&quot;field-icons&quot;&gt;
         &lt;i class=&quot;icon left&quot;&gt;person&lt;/i&gt;
         &lt;input type=&quot;text&quot; value=&quot;Smith&quot; required&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   
-    &lt;div class=&quot;form-group&quot; id=&quot;locationFormGroup&quot;&gt;
+    &lt;div class=&quot;field-group&quot; id=&quot;locationFormGroup&quot;&gt;
       &lt;input type=&quot;text&quot; id=&quot;city&quot; value=&quot;City&quot;&gt;
       &lt;div class=&quot;select&quot;&gt;
         &lt;select id=&quot;state&quot;&gt;
@@ -541,7 +546,7 @@ Buttons must be wrapped in <code>.textbox-buttons</code>.</p>
       &lt;/div&gt;
     &lt;/div&gt;
   
-    &lt;div class=&quot;form-group&quot; id=&quot;shirtFormGroup&quot;&gt;
+    &lt;div class=&quot;field-group&quot; id=&quot;shirtFormGroup&quot;&gt;
       &lt;div class=&quot;select&quot; id=&quot;size&quot;&gt;
         &lt;select&gt;
           &lt;option&gt;Size&lt;/option&gt;
@@ -559,7 +564,7 @@ Buttons must be wrapped in <code>.textbox-buttons</code>.</p>
       &lt;/div&gt;
     &lt;/div&gt;
   
-    &lt;div class=&quot;form-group&quot; id=&quot;locationFormGroup&quot;&gt;
+    &lt;div class=&quot;field-group&quot; id=&quot;locationFormGroup&quot;&gt;
       &lt;div class=&quot;select&quot;&gt;
         &lt;select id=&quot;country&quot;&gt;
           &lt;option&gt;County&lt;/option&gt;
@@ -577,19 +582,21 @@ Buttons must be wrapped in <code>.textbox-buttons</code>.</p>
         &lt;/select&gt;
       &lt;/div&gt;
       &lt;input type=&quot;text&quot; id=&quot;city&quot; value=&quot;City&quot;&gt;
-      &lt;div class=&quot;textbox-buttons&quot;&gt;&lt;button class=&quot;primary&quot;&gt;&lt;i class=&quot;icon&quot;&gt;add&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
+      &lt;div class=&quot;field-buttons&quot;&gt;&lt;button class=&quot;primary&quot;&gt;&lt;i class=&quot;icon&quot;&gt;add&lt;/i&gt;&lt;/button&gt;&lt;/div&gt;
     &lt;/div&gt;
   &lt;/form&gt;
 </pre>
 
-<h4>Texbox Icons</h4>
+<h4>Field Icons</h4>
+<p class="info">Add icons to a form field by placing the icons and the field inside a <code>field-icons</code> container.</p>
+
 <form class="inline">
-  <div class="textbox-group">
+  <div class="field-icons">
     <i class="icon left">phone_android</i>
     <input type="text" value="0800 123456">
   </div>
 
-  <div class="textbox-group">
+  <div class="field-icons">
     <i class="icon left">person</i>
     <i class="icon right">clear</i>
     <input type="text" value="Bob Smith">
@@ -599,12 +606,12 @@ Buttons must be wrapped in <code>.textbox-buttons</code>.</p>
 <h5>HTML</h5>
 <pre>
 &lt;form class=&quot;inline&quot;&gt;
-  &lt;div class=&quot;textbox-group&quot;&gt;
+  &lt;div class=&quot;field-icons&quot;&gt;
     &lt;i class=&quot;icon left&quot;&gt;phone_android&lt;/i&gt;
     &lt;input type=&quot;text&quot; value=&quot;0800 123456&quot;&gt;
   &lt;/div&gt;
 
-  &lt;div class=&quot;textbox-group&quot;&gt;
+  &lt;div class=&quot;field-icons&quot;&gt;
     &lt;i class=&quot;icon left&quot;&gt;person&lt;/i&gt;
     &lt;i class=&quot;icon right&quot;&gt;clear&lt;/i&gt;
     &lt;input type=&quot;text&quot; value=&quot;Bob Smith&quot;&gt;
@@ -612,26 +619,25 @@ Buttons must be wrapped in <code>.textbox-buttons</code>.</p>
 &lt;/form&gt;
 </pre>
 
-<h4>Texbox Validation</h4>
+<h4>Field Validation</h4>
 <p class="info">Use the input attribute <code>required</code> in conjunction with <code>type</code> to highlight invalid fields.
-  Add feedback text using <code>.form-feedback</code> wrapped in <code>.field</code> along with the input.</p>
-  </p>
+  Add feedback text using <code>field-feedback</code> inside a <code>field</code> container along with the input field.</p>
 
 <form class="inline">
   <input type="url" value="http\\www.google.com" required>
 
   <div class="field">
-    <div class="textbox-group">
+    <div class="field-icons">
       <i class="icon left">person</i>
       <i class="icon right">clear</i>
       <input type="email" value="bob@@acme.com" required>
     </div>
-    <div class="form-feedback invalid">Invalid email address</div>
+    <div class="field-feedback invalid">Invalid email address</div>
   </div>
 
   <div class="field">
     <input type="email" value="bob@acme.com" required>
-    <div class="form-feedback">Enter a work email address</div>
+    <div class="field-feedback">Enter a work email address</div>
   </div>
 </form>
 
@@ -641,17 +647,17 @@ Buttons must be wrapped in <code>.textbox-buttons</code>.</p>
   &lt;input type=&quot;url&quot; value=&quot;http\\www.google.com&quot; required&gt;
 
   &lt;div class=&quot;field&quot;&gt;
-    &lt;div class=&quot;textbox-group&quot;&gt;
+    &lt;div class=&quot;field-icons&quot;&gt;
       &lt;i class=&quot;icon left&quot;&gt;person&lt;/i&gt;
       &lt;i class=&quot;icon right&quot;&gt;clear&lt;/i&gt;
       &lt;input type=&quot;email&quot; value=&quot;bob@@acme.com&quot; required&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;form-feedback invalid&quot;&gt;Invalid email address&lt;/div&gt;
+    &lt;div class=&quot;field-feedback invalid&quot;&gt;Invalid email address&lt;/div&gt;
   &lt;/div&gt;
 
   &lt;div class=&quot;field&quot;&gt;
     &lt;input type=&quot;email&quot; value=&quot;bob@acme.com&quot; required&gt;
-    &lt;div class=&quot;form-feedback&quot;&gt;Enter a work email address&lt;/div&gt;
+    &lt;div class=&quot;field-feedback&quot;&gt;Enter a work email address&lt;/div&gt;
   &lt;/div&gt;
 &lt;/form&gt;
 </pre>
