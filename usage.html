@@ -20,10 +20,6 @@
       border: 1px solid #ebeaea;
       background-color: #fafafa;
     }
-    #locationFormGroup .select,
-    #shirtFormGroup .select {
-      width: 33.33%;
-    }
 
     /* Desktop style overrides */
     @media (min-width: 1200px) {
@@ -401,7 +397,10 @@ Buttons must be wrapped in <code>.textbox-buttons</code>.</p>
         <option>Miss</option>
       </select>
     </div>
-    <input type="text" value="Smith">
+    <div class="textbox-group">
+      <i class="icon left">person</i>
+      <input type="text" value="Smith" required>
+    </div>
   </div>
 
   <div class="form-group" id="locationFormGroup">
@@ -516,7 +515,10 @@ Buttons must be wrapped in <code>.textbox-buttons</code>.</p>
           &lt;option&gt;Miss&lt;/option&gt;
         &lt;/select&gt;
       &lt;/div&gt;
-      &lt;input type=&quot;text&quot; value=&quot;Smith&quot;&gt;
+      &lt;div class=&quot;textbox-group&quot;&gt;
+        &lt;i class=&quot;icon left&quot;&gt;person&lt;/i&gt;
+        &lt;input type=&quot;text&quot; value=&quot;Smith&quot; required&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
   
     &lt;div class=&quot;form-group&quot; id=&quot;locationFormGroup&quot;&gt;

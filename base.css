@@ -140,7 +140,7 @@ form button {
     display: table-cell;
 }
 .form-group > .select {
-    width: 75px;
+    width: 33.33%;
     vertical-align: top;
 }
 .textbox-buttons {
@@ -505,6 +505,10 @@ select:-moz-focusring {
 
 /* Desktop style overrides */
 @media (min-width: 1200px) {
+    /* Stacked Form */
+    form .form-group .select {
+        width: 20%;
+    }
 
     /* Inline Form */
     form.inline .field,
@@ -534,12 +538,16 @@ select:-moz-focusring {
         width: 200px;
     }
     form.inline .form-group input,
-    form.inline .form-group .select {
+    form.inline .form-group .select,
+    form.inline .form-group .textbox-group {
         display: table-cell;
         width: 100%;
     }
+    form.inline .form-group .textbox-group input {
+        display: inline-block;
+    }
     form.inline .form-group .select {
-        width: 75px;
+        width: 33.33%;
     }
 
     /* Navbar */
