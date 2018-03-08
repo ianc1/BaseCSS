@@ -614,4 +614,11 @@ select:-moz-focusring {
     .mobile-hide {
         display: block;
     }
+    th.mobile-hide,
+    td.mobile-hide {
+        display: table-cell;
+    }
+    tr.mobile-hide {
+        display: table-row;
+    }
 }
