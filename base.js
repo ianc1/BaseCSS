@@ -17,7 +17,7 @@
 
         // Check if menu button click.
         var isButtonClick = target.matches('.dropdown > button') 
-            || target.parentNode.matches('.navbar > button');
+            || target.parentNode.matches && target.parentNode.matches('.navbar > button');
 
         if (event.type === 'click' && isButtonClick) {
             var menu = target.parentNode.querySelector('.dropdown-menu')

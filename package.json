@@ -1,6 +1,6 @@
 {
   "name": "base-css-theme",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A simple CSS theme to kick start your project. Provides a consistent responsive style across mobile and desktop browsers for the base HTML elements.",
   "repository": {
     "type": "git",
