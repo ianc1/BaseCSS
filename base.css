@@ -14,7 +14,7 @@ body, h1, h2, h3, h4, h5, h6, section, p, pre, code, input, select, textarea, bu
 }
 
 body {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 hr {
@@ -29,22 +29,22 @@ h1, h2, h3, h4, h5, h6 {
     margin: 20px 0 10px;
 }
 h1 {
-    font-size: 36px;
+    font-size: 38px;
 }
 h2 {
-    font-size: 30px;
+    font-size: 32px;
 }
 h3 {
-    font-size: 24px;
+    font-size: 26px;
 }
 h4 {
-    font-size: 18px;
+    font-size: 20px;
 }
 h5 {
-    font-size: 14px;
+    font-size: 16px;
 }
 h6 {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 section {
@@ -66,7 +66,7 @@ pre {
     border: 1px solid #e1e1e8;
     border-radius: 0;
     font-family: 'Droid Sans Mono', monospace;
-    font-size: 12px;
+    font-size: 14px;
     white-space: -moz-pre-wrap;
     white-space: -pre-wrap;
     white-space: -o-pre-wrap;
@@ -155,7 +155,7 @@ form button {
 .field > .field-feedback,
 .field-group > .field-feedback {
     position: absolute;
-    font-size: 10px;
+    font-size: 12px;
     margin-top: -23px;
 }
 .field > .field-feedback.invalid,
